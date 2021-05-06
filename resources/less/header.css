@@ -255,9 +255,9 @@
     width: 100%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .dropdown {
-    display: none !important;
+    display: none;
   }
   .phone {
     display: none;

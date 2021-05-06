@@ -15,4 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .less('resources/less/header.less', 'public/css/header.css')
     .options({processCssUrls: false})
+    .less('resources/less/footer.less', 'public/css/footer.css')
+    .options({processCssUrls: false})
     .sourceMaps();
