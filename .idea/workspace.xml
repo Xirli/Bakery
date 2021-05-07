@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="header with layout menu">
-      <change afterPath="$PROJECT_DIR$/public/images/email1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/facebook1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/instagram1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/phone3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pinterest1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/tiktok1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/less/footer.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/footer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/footer.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/footer.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/less/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/less/header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/less/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +166,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../New_Gastrocenter" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -218,6 +211,8 @@
       <workItem from="1620153484367" duration="2356000" />
       <workItem from="1620210744786" duration="39000" />
       <workItem from="1620314120362" duration="24249000" />
+      <workItem from="1620344353888" duration="577000" />
+      <workItem from="1620386548429" duration="11229000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1619799435160</created>
@@ -268,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620329489345</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="unadaptive footer">
+      <created>1620344478479</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620344478479</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +294,7 @@
     <MESSAGE value="welcome" />
     <MESSAGE value="header without layout menu" />
     <MESSAGE value="header with layout menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="header with layout menu" />
+    <MESSAGE value="unadaptive footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="unadaptive footer" />
   </component>
 </project>

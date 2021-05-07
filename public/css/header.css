@@ -43,6 +43,9 @@
   width: 372px;
   height: 34px;
 }
+.menu_c {
+  background-color: white;
+}
 .stick_header {
   align-items: center;
   position: fixed;

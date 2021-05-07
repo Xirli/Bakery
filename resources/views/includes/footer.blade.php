@@ -1,9 +1,9 @@
 <div class="footer_wrap">
     <div class="container footer_text_wrap">
-        <div class="row">
-            <div class="col-3">
+        <div class="row r">
+            <div class="A">
                 <a class="footer_titles">КОНТАКТИ</a>
-                <div class="footer_span_wrap">
+                <div class="footer_span_wrap" align="center">
                     <div class="s">
                         <img src="public/images/phone3.svg">
                         <span class="footer_span">+1-2222-44445-44</span>
@@ -26,12 +26,16 @@
                 </div>
 
             </div>
-            <div class="col-4 offset-1">
-                <a class="footer_titles">Підписуйся та слідкуй за новинами</a>
+            <div class="B">
+                    <a class="footer_titles" style="width: 258px">ПІДПИСУЙСЯ ТА СЛІДКУЙ ЗА НОВИНАМИ</a>
+                    <form class="wrap_send">
+                        <input class="first_div" placeholder="введіть ваш e-mail" type="text" name="search_str" autocomplete="off">
+                        <button class="footer_send">Підписатися</button>
+                    </form>
             </div>
-            <div class="col-3 offset-1">
-                <a class="footer_titles">АДРЕСА</a>
-                <div class="footer_span_wrap" style="height: 58px">
+            <div class="C">
+                <a class="footer_titles" align="center" >АДРЕСА</a>
+                <div class="footer_span_wrap1" align="center" style="height: 58px;">
                     <span class="footer_span" >Київ, вулиця Політехнічна 6</span>
                     <span class="footer_span">Київ, вулиця Політехнічна 6</span>
                 </div>
