@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="header with layout menu">
+      <change afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/footer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/footer.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/footer.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
