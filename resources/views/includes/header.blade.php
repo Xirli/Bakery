@@ -1,4 +1,4 @@
-<div class="container" style="height: 122px"></div>
+<div class="container bef_h"></div>
 <div class="stick_header">
     <div class="header_wrap">
         <div class="container header_wrap1">

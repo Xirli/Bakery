@@ -12,8 +12,11 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/slider.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .less('resources/less/header.less', 'public/css/header.css')
+    .options({processCssUrls: false})
+    .less('resources/less/landing.less', 'public/css/landing.css')
     .options({processCssUrls: false})
     .less('resources/less/footer.less', 'public/css/footer.css')
     .options({processCssUrls: false})

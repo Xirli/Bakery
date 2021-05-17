@@ -239,8 +239,12 @@
 .dropdown1:hover .dropdown-content1 {
   display: block;
 }
+.bef_h {
+  height: 122px;
+}
 @media (max-width: 992px) {
-  .menu {
+  .menu,
+  .bef_h {
     height: 71px;
   }
   .menu_icons {
@@ -285,7 +289,8 @@
   .bakery {
     font-size: 24px;
   }
-  .menu {
+  .menu,
+  .bef_h {
     height: 41px;
   }
 }
