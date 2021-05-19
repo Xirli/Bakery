@@ -21,3 +21,4 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.less('resources/less/login.less', 'public/css/login.css')
     .less('resources/less/register.less', 'public/css/register.css')
+    .less('resources/less/shopping_cart.less', 'public/css/shopping_cart.css')
