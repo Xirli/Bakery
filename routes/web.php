@@ -25,3 +25,12 @@ Route::get('/register', function () {
 Route::get('/shopping', function () {
     return view('shopping_cart');
 });
+Route::get('/shopping_cart', function () {
+    return view('shopping_cart');
+});
+Route::get('/profile', function () {
+    return view('profile_page');
+});
+Route::get('/profile_page', function () {
+    return view('profile_page');
+});

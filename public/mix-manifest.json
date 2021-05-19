@@ -5,5 +5,6 @@
     "/css/register.css": "/css/register.css",
     "/css/login.css": "/css/login.css",
     "/css/footer.css": "/css/footer.css",
-    "/css/header.css": "/css/header.css"
+    "/css/header.css": "/css/header.css",
+    "/css/profile_page.css": "/css/profile_page.css"
 }
