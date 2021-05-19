@@ -18,6 +18,8 @@ mix.js('resources/js/app.js', 'public/js')
     .options({processCssUrls: false})
     .less('resources/less/landing.less', 'public/css/landing.css')
     .options({processCssUrls: false})
+    .less('resources/less/contacts.less', 'public/css/contacts.css')
+    .options({processCssUrls: false})
     .less('resources/less/footer.less', 'public/css/footer.css')
     .options({processCssUrls: false})
     .sourceMaps();

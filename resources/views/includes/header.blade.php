@@ -49,7 +49,7 @@
                             <li><a href="#">Клієнтам</a>
                                 <ul>
                                     <li><a href="#">Про нас</a></li>
-                                    <li><a href="#">Контакти</a></li>
+                                    <li><a href="/Bakery/contacts">Контакти</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Новини</a></li>
@@ -75,7 +75,7 @@
                         </button>
                         <ul class="dropdown-content1">
                             <li><a href="#">Про нас</a></li>
-                            <li><a href="#">Контакти</a></li>
+                            <li><a href="/Bakery/contacts">Контакти</a></li>
                         </ul>
                     </div>
                     <button class="dropbtn1">
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="bakery">
-                <a>Bakery</a>
+                <a class="bak" href="/Bakery/">Bakery</a>
             </div>
             <div class="wrap_menu_icons" align="right">
                 <div class="menu_icons">

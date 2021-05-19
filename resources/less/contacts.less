@@ -1,0 +1,139 @@
+.page_name{
+    font-family: Caveat;
+    font-style: normal;
+    font-weight: normal;
+    //line-height: 81px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.name_head{
+    font-size: 50px;
+}
+.page_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name_line{
+    max-width: 933px;
+    transform: rotate(0.01deg);
+    width: 100%;
+    border: none;
+    height: 0.1px;
+    background: #D1D1D1;
+}
+.dem_scr{
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+}
+.contacts_name{
+    font-family: Caveat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+}
+.wrap_timetable{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 630px;
+    width: 100%;
+    padding: 0px 0px 40px 0px;
+}
+.wrap_timetable span{
+    font-size: 30px;
+    line-height: 45px;
+}
+.contacts_wrap{
+    margin: 40px auto 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 45px;
+}
+.div1, .div3{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    min-height: 115px;
+    height: 100%;
+}
+.div2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    max-height: 115px;
+    margin-top: 5px;
+}
+.c_ph{
+    height: 40px;
+    width: 40px;
+}
+.c_em{
+    height: 30px;
+    width: 40px;
+}
+.c_loc{
+    height: 48px;
+    width: 46px;
+}
+@media (max-width: 1040px) {
+    .dem_scr{
+        min-width: 256px;
+    }
+}
+@media (max-width: 992px){
+    .contacts_name{
+        font-size: 30px;
+    }
+    .name_head{
+        font-size: 36px;
+    }
+    .contacts_wrap{
+        font-size: 20px;
+    }
+    .div1, .div3{
+        min-height: 100px;
+        height: 100%;
+    }
+    .div2{
+        height: 95px;
+    }
+}
+@media (max-width: 540px){
+    .contacts_wrap{
+        flex-direction: column;
+        font-size: 24px;
+    }
+    .wrap_timetable{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrap_timetable span{
+        font-size: 24px;
+    }
+    .div1, .div3{
+        flex-direction: row;
+    }
+    .div2{
+        flex-direction: row;
+    }
+    .contacts_wrap{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

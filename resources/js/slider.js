@@ -69,7 +69,7 @@ $(document).ready(function() {
                 nav:false
             },
             600:{
-                items:1,
+                items:2,
                 nav:false
             },
             900:{
