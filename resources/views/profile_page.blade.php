@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
 
     <link href="{{ asset ('public/css/app.css') }}" rel="stylesheet"/>
-
     <link href="{{ asset ('public/css/header.css') }}" rel="stylesheet"/>
     <link href="{{ asset ('public/css/footer.css') }}" rel="stylesheet"/>
 
+    <link href="{{ asset ('public/css/profile_page.css') }}" rel="stylesheet"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,12 +16,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet"/>
-
-    <link href="{{ asset ('public/css/profile_page.css') }}" rel="stylesheet"/>
 
     <title>Profile page</title>
 </head>
@@ -33,7 +31,7 @@
             <div>
                 <div class="personal-data-title">
                     <img src="public/images/user.svg" alt="">
-                    Особисті дані
+                    Оформлення замовлення
                 </div>
                 <div class="personal-data-line"></div>
             </div>

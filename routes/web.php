@@ -22,15 +22,24 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
 Route::get('/shopping', function () {
     return view('shopping_cart');
 });
 Route::get('/shopping_cart', function () {
     return view('shopping_cart');
 });
+
 Route::get('/profile', function () {
     return view('profile_page');
 });
 Route::get('/profile_page', function () {
     return view('profile_page');
+});
+
+Route::get('/confirm', function () {
+    return view('confirm_order');
+});
+Route::get('/confirm_order', function () {
+    return view('confirm_order');
 });
