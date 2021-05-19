@@ -20,3 +20,4 @@ mix.js('resources/js/app.js', 'public/js')
     .sourceMaps();
 
 mix.less('resources/less/login.less', 'public/css/login.css')
+    .less('resources/less/register.less', 'public/css/register.css')
