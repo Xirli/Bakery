@@ -14,8 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landing');
+    $page_name = 'Bakery';
+    return view('landing', compact('page_name'));
 });
 Route::get('/contacts', function () {
-    return view('contacts');
+    $page_name = 'Контакти';
+    return view('contacts', compact('page_name'));
+});
+Route::get('/about', function () {
+    $page_name = 'Про нас';
+    return view('about', compact('page_name'));
 });

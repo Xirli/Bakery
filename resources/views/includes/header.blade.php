@@ -48,7 +48,7 @@
                             </li>
                             <li><a href="#">Клієнтам</a>
                                 <ul>
-                                    <li><a href="#">Про нас</a></li>
+                                    <li><a href="/Bakery/about">Про нас</a></li>
                                     <li><a href="/Bakery/contacts">Контакти</a></li>
                                 </ul>
                             </li>
@@ -74,7 +74,7 @@
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <ul class="dropdown-content1">
-                            <li><a href="#">Про нас</a></li>
+                            <li><a href="/Bakery/about">Про нас</a></li>
                             <li><a href="/Bakery/contacts">Контакти</a></li>
                         </ul>
                     </div>
