@@ -38,9 +38,9 @@
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <ul class="dropdown-content">
-                            <li><a href="#">Меню</a>
+                            <li><a href="/Bakery/menu" >Меню</a>
                                 <ul>
-                                    <li><a href="#">Хліб класичний</a></li
+                                    <li><a href="/Bakery/products">Хліб класичний</a></li
                                     ><li><a href="#">Здобна випічка</a></li
                                     ><li><a href="#">Пироги</a></li
                                     ><li><a href="#">Веганська випічка</a></li>
@@ -52,17 +52,17 @@
                                     <li><a href="/Bakery/contacts">Контакти</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Новини</a></li>
+                            <li><a href="/Bakery/news">Новини</a></li>
                         </ul>
                     </div>
                     <img class="phone" src="public/images/phone_mob.svg">
                     <div class="dropdown1">
                         <button class="dropbtn1">
-                            <a class="menu_a1">Меню</a>
+                            <a href="/Bakery/menu" class="menu_a1">Меню</a>
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <ul class="dropdown-content1">
-                            <li><a href="#">Хліб класичний</a></li>
+                            <li><a href="/Bakery/products">Хліб класичний</a></li>
                             <li><a href="#">Здобна випічка</a></li>
                             <li><a href="#">Пироги</a></li>
                             <li><a href="#">Веганська випічка</a></li>
@@ -79,7 +79,7 @@
                         </ul>
                     </div>
                     <button class="dropbtn1">
-                        <a class="menu_a1">Новини</a>
+                        <a href="/Bakery/news" class="menu_a1">Новини</a>
                         <i class="fa fa-caret-down"></i>
                     </button>
                 </div>

@@ -25,6 +25,22 @@ Route::get('/about', function () {
     $page_name = 'Про нас';
     return view('about', compact('page_name'));
 });
+Route::get('/menu', function () {
+    $page_name = 'Меню';
+    return view('container', compact('page_name'));
+});
+Route::get('/news', function () {
+    $page_name = 'Новини';
+    return view('news', compact('page_name'));
+});
+Route::get('/products', function () {
+    $page_name = 'Хліб білий';
+    return view('products', compact('page_name'));
+});
+Route::get('/product', function () {
+    $page_name = 'Хліб класичний';
+    return view('product', compact('page_name'));
+});
 Route::get('/login', function () {
     return view('login');
 });

@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
     <link rel="stylesheet" href=" {{ asset('public/css/about.css') }}">
-    <div class="container-md">
+    <div class="">
         <div class="page_name">
             <h1 class="name_head">Про нас</h1>
             <hr class="name_line">
