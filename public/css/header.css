@@ -78,7 +78,7 @@
   align-items: center;
   padding-left: 31.5px;
 }
-.bakery {
+.bak {
   font-family: Courgette;
   font-style: normal;
   font-weight: normal;
@@ -86,7 +86,10 @@
   line-height: 80px;
   display: flex;
   align-items: center;
-  color: #CF8D2E;
+  color: #CF8D2E !important;
+}
+.bak:hover {
+  text-decoration: none;
 }
 .menu_icons {
   display: flex;
@@ -239,8 +242,12 @@
 .dropdown1:hover .dropdown-content1 {
   display: block;
 }
+.bef_h {
+  height: 122px;
+}
 @media (max-width: 992px) {
-  .menu {
+  .menu,
+  .bef_h {
     height: 71px;
   }
   .menu_icons {
@@ -254,7 +261,7 @@
   .header_wrap {
     display: none;
   }
-  .bakery {
+  .bak {
     font-size: 48px;
   }
   .submenu {
@@ -282,10 +289,11 @@
   }
 }
 @media (max-width: 440px) {
-  .bakery {
+  .bak {
     font-size: 24px;
   }
-  .menu {
+  .menu,
+  .bef_h {
     height: 41px;
   }
 }

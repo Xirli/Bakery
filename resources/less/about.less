@@ -1,0 +1,128 @@
+.page_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name_head{
+     font-family: Caveat;
+     font-style: normal;
+     font-weight: normal;
+     //line-height: 81px;
+     display: flex;
+     align-items: center;
+     color: #000000;
+     font-size: 50px;
+     margin-top: 50px;
+ }
+.name_line{
+    max-width: 933px;
+    transform: rotate(0.01deg);
+    width: 100%;
+    border: none;
+    height: 0.1px;
+    background: #D1D1D1;
+}
+.title_line{
+    text-align: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.div_about_1, .div_about_2, .div_about_3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 45px;
+    width: 100%;
+    max-width: 1000px;
+}
+.ab_text1, .ab_text2, .ab_text3{
+    font-family: Caveat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    align-items: center;
+    color: #000000;
+    max-width: 365px;
+    width: 100%;
+}
+.about_3{
+    border-radius: 227.5px;
+}
+.about_2{
+    border-radius: 217px;
+}
+.about_1{
+    border-radius: 191px;
+}
+.div_about_2{
+    max-width: 975px;
+    margin: auto;
+}
+.wrapper{
+    background-color: rgba(250, 248, 212, 1);
+    margin-bottom: 15px;
+    width: 100%;
+}
+.wrap_about_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 1040px) {
+    .ab_text1, .ab_text2, .ab_text3{
+        font-size: 24px;
+    }
+    .about_3, .about_1, .about_2{
+        border-radius: 227.5px;
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+@media (max-width: 770px){
+    .div_about_1, .div_about_2, .div_about_3{
+        padding: 0px 0px 65px 0px;
+    }
+
+}
+@media (max-width: 650px){
+    .name_head{
+        font-size: 36px;
+    }
+    .ab_text1, .ab_text2, .ab_text3{
+        font-size: 18px;
+    }
+    .div_about_1, .div_about_2, .div_about_3{
+        flex-direction: column;
+        padding: 0px;
+    }
+    .about_3{
+        min-width: 320px;
+        width: 100%;
+        height: 233px;
+        border-radius: 0px;
+        order: 1;
+    }
+    .about_2{
+        width: 296px;
+        border-radius: 217px;
+    }
+    .ab_text1{
+        order: 2;
+    }
+    .ab_text3{
+        order: 2;
+    }
+    .about_1{
+        border-radius: 0px;
+        order: 1;
+        width: 320px;
+        height: 307px;
+    }
+    .ab_text1, .ab_text2, .ab_text3{
+        max-width: 300px;
+    }
+}

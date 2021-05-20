@@ -11,10 +11,11 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet" />
+        <title>{{$page_name}}</title>
     </head>
     <body>
     @include('includes/header')
-    <div style="height: 500px"></div>
     @yield('content')
     @include('includes/footer')
     </body>

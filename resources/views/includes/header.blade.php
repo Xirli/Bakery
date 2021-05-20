@@ -1,4 +1,4 @@
-<div class="container" style="height: 122px"></div>
+<div class="container bef_h"></div>
 <div class="stick_header">
     <div class="header_wrap">
         <div class="container header_wrap1">
@@ -48,8 +48,8 @@
                             </li>
                             <li><a href="#">Клієнтам</a>
                                 <ul>
-                                    <li><a href="#">Про нас</a></li>
-                                    <li><a href="#">Контакти</a></li>
+                                    <li><a href="/Bakery/about">Про нас</a></li>
+                                    <li><a href="/Bakery/contacts">Контакти</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Новини</a></li>
@@ -74,8 +74,8 @@
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <ul class="dropdown-content1">
-                            <li><a href="#">Про нас</a></li>
-                            <li><a href="#">Контакти</a></li>
+                            <li><a href="/Bakery/about">Про нас</a></li>
+                            <li><a href="/Bakery/contacts">Контакти</a></li>
                         </ul>
                     </div>
                     <button class="dropbtn1">
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="bakery">
-                <a>Bakery</a>
+                <a class="bak" href="/Bakery/">Bakery</a>
             </div>
             <div class="wrap_menu_icons" align="right">
                 <div class="menu_icons">

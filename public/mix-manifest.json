@@ -1,11 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/slider.js": "/js/slider.js",
     "/css/app.css": "/css/app.css",
     "/css/shopping_cart.css": "/css/shopping_cart.css",
     "/css/register.css": "/css/register.css",
     "/css/login.css": "/css/login.css",
     "/css/footer.css": "/css/footer.css",
-    "/css/header.css": "/css/header.css",
-    "/css/confirm_order.css": "/css/confirm_order.css",
-    "/css/profile_page.css": "/css/profile_page.css"
+    "/css/header.css": "/css/header.css"
 }
