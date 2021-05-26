@@ -1,0 +1,1033 @@
+Index: routes/web.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nuse Illuminate\\Support\\Facades\\Route;\r\n\r\n/*\r\n|--------------------------------------------------------------------------\r\n| Web Routes\r\n|--------------------------------------------------------------------------\r\n|\r\n| Here is where you can register web routes for your application. These\r\n| routes are loaded by the RouteServiceProvider within a group which\r\n| contains the \"web\" middleware group. Now create something great!\r\n|\r\n*/\r\n\r\nRoute::get('/', function () {\r\n    $page_name = 'Bakery';\r\n    return view('landing', compact('page_name'));\r\n});\r\nRoute::get('/contacts', function () {\r\n    $page_name = 'Контакти';\r\n    return view('contacts', compact('page_name'));\r\n});\r\nRoute::get('/about', function () {\r\n    $page_name = 'Про нас';\r\n    return view('about', compact('page_name'));\r\n});\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/routes/web.php b/routes/web.php
+--- a/routes/web.php	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/routes/web.php	(date 1621458808123)
+@@ -25,3 +25,15 @@
+     $page_name = 'Про нас';
+     return view('about', compact('page_name'));
+ });
++Route::get('/menu', function () {
++    $page_name = 'Меню';
++    return view('container', compact('page_name'));
++});
++Route::get('/news', function () {
++    $page_name = 'Новини';
++    return view('news', compact('page_name'));
++});
++Route::get('/products', function () {
++    $page_name = 'Хліб білий';
++    return view('products', compact('page_name'));
++});
+Index: resources/views/includes/header.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><div class=\"container bef_h\"></div>\r\n<div class=\"stick_header\">\r\n    <div class=\"header_wrap\">\r\n        <div class=\"container header_wrap1\">\r\n            <div class=\"row small_header\">\r\n                <div class=\"col-2 c1\">\r\n                    <div class=\"telephone\">\r\n                        <img src=\"public/images/phone.svg\" style=\"height: 20px; width: 20px\"><span>+1-2222-44445-44</span>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-3 c1\">\r\n                    <div class=\"email\">\r\n                        <img src=\"public/images/email.svg\" style=\"height: 20px; width: 20px\"><span>bakery@gmail.com</span>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-4 c1\">\r\n                    <div class=\"time-table\">\r\n                        <img src=\"public/images/clock.svg\" style=\"height: 20px; width: 20px\"><span> Пн - Пт / 10:00-21:00, Сб - Нд / 09:00 - 23:00</span>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-2 c1 offset-1\">\r\n                    <div class=\"social\">\r\n                        <img src=\"public/images/instagram.svg\" style=\"height: 20px; width: 20px\">\r\n                        <img src=\"public/images/tiktok.svg\" style=\"height: 20px; width: 20px\">\r\n                        <img src=\"public/images/pinterest.svg\" style=\"height: 20px; width: 20px\">\r\n                        <img src=\"public/images/facebook.svg\" style=\"height: 20px; width: 20px\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"menu_c\">\r\n        <div class=\"container menu\">\r\n            <div class=\"wrap_submenu\">\r\n                <div class=\"submenu\">\r\n                    <div class=\"dropdown\">\r\n                        <button class=\"dropbtn\">\r\n                            <i class=\"fa fa-caret-down\"></i>\r\n                        </button>\r\n                        <ul class=\"dropdown-content\">\r\n                            <li><a href=\"#\">Меню</a>\r\n                                <ul>\r\n                                    <li><a href=\"#\">Хліб класичний</a></li\r\n                                    ><li><a href=\"#\">Здобна випічка</a></li\r\n                                    ><li><a href=\"#\">Пироги</a></li\r\n                                    ><li><a href=\"#\">Веганська випічка</a></li>\r\n                                </ul>\r\n                            </li>\r\n                            <li><a href=\"#\">Клієнтам</a>\r\n                                <ul>\r\n                                    <li><a href=\"/Bakery/about\">Про нас</a></li>\r\n                                    <li><a href=\"/Bakery/contacts\">Контакти</a></li>\r\n                                </ul>\r\n                            </li>\r\n                            <li><a href=\"#\">Новини</a></li>\r\n                        </ul>\r\n                    </div>\r\n                    <img class=\"phone\" src=\"public/images/phone_mob.svg\">\r\n                    <div class=\"dropdown1\">\r\n                        <button class=\"dropbtn1\">\r\n                            <a class=\"menu_a1\">Меню</a>\r\n                            <i class=\"fa fa-caret-down\"></i>\r\n                        </button>\r\n                        <ul class=\"dropdown-content1\">\r\n                            <li><a href=\"#\">Хліб класичний</a></li>\r\n                            <li><a href=\"#\">Здобна випічка</a></li>\r\n                            <li><a href=\"#\">Пироги</a></li>\r\n                            <li><a href=\"#\">Веганська випічка</a></li>\r\n                        </ul>\r\n                    </div>\r\n                    <div class=\"dropdown1\">\r\n                        <button class=\"dropbtn1\">\r\n                            <a class=\"menu_a1\">Клієнтам</a>\r\n                            <i class=\"fa fa-caret-down\"></i>\r\n                        </button>\r\n                        <ul class=\"dropdown-content1\">\r\n                            <li><a href=\"/Bakery/about\">Про нас</a></li>\r\n                            <li><a href=\"/Bakery/contacts\">Контакти</a></li>\r\n                        </ul>\r\n                    </div>\r\n                    <button class=\"dropbtn1\">\r\n                        <a class=\"menu_a1\">Новини</a>\r\n                        <i class=\"fa fa-caret-down\"></i>\r\n                    </button>\r\n                </div>\r\n            </div>\r\n            <div class=\"bakery\">\r\n                <a class=\"bak\" href=\"/Bakery/\">Bakery</a>\r\n            </div>\r\n            <div class=\"wrap_menu_icons\" align=\"right\">\r\n                <div class=\"menu_icons\">\r\n                    <img src=\"public/images/user.svg\">\r\n                    <img src=\"public/images/shopping_cart.svg\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/views/includes/header.blade.php b/resources/views/includes/header.blade.php
+--- a/resources/views/includes/header.blade.php	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/resources/views/includes/header.blade.php	(date 1621458844241)
+@@ -38,9 +38,9 @@
+                             <i class="fa fa-caret-down"></i>
+                         </button>
+                         <ul class="dropdown-content">
+-                            <li><a href="#">Меню</a>
++                            <li><a href="/Bakery/menu" >Меню</a>
+                                 <ul>
+-                                    <li><a href="#">Хліб класичний</a></li
++                                    <li><a href="/Bakery/products">Хліб класичний</a></li
+                                     ><li><a href="#">Здобна випічка</a></li
+                                     ><li><a href="#">Пироги</a></li
+                                     ><li><a href="#">Веганська випічка</a></li>
+@@ -52,17 +52,17 @@
+                                     <li><a href="/Bakery/contacts">Контакти</a></li>
+                                 </ul>
+                             </li>
+-                            <li><a href="#">Новини</a></li>
++                            <li><a href="/Bakery/news">Новини</a></li>
+                         </ul>
+                     </div>
+                     <img class="phone" src="public/images/phone_mob.svg">
+                     <div class="dropdown1">
+                         <button class="dropbtn1">
+-                            <a class="menu_a1">Меню</a>
++                            <a href="/Bakery/menu" class="menu_a1">Меню</a>
+                             <i class="fa fa-caret-down"></i>
+                         </button>
+                         <ul class="dropdown-content1">
+-                            <li><a href="#">Хліб класичний</a></li>
++                            <li><a href="/Bakery/products">Хліб класичний</a></li>
+                             <li><a href="#">Здобна випічка</a></li>
+                             <li><a href="#">Пироги</a></li>
+                             <li><a href="#">Веганська випічка</a></li>
+@@ -79,7 +79,7 @@
+                         </ul>
+                     </div>
+                     <button class="dropbtn1">
+-                        <a class="menu_a1">Новини</a>
++                        <a href="/Bakery/news" class="menu_a1">Новини</a>
+                         <i class="fa fa-caret-down"></i>
+                     </button>
+                 </div>
+Index: webpack.mix.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const mix = require('laravel-mix');\r\n\r\n/*\r\n |--------------------------------------------------------------------------\r\n | Mix Asset Management\r\n |--------------------------------------------------------------------------\r\n |\r\n | Mix provides a clean, fluent API for defining some Webpack build steps\r\n | for your Laravel application. By default, we are compiling the Sass\r\n | file for the application as well as bundling up all the JS files.\r\n |\r\n */\r\n\r\nmix.js('resources/js/app.js', 'public/js')\r\n    .js('resources/js/slider.js', 'public/js')\r\n    .sass('resources/sass/app.scss', 'public/css')\r\n    .less('resources/less/header.less', 'public/css/header.css')\r\n    .options({processCssUrls: false})\r\n    .less('resources/less/landing.less', 'public/css/landing.css')\r\n    .options({processCssUrls: false})\r\n    .less('resources/less/contacts.less', 'public/css/contacts.css')\r\n    .options({processCssUrls: false})\r\n    .less('resources/less/about.less', 'public/css/about.css')\r\n    .options({processCssUrls: false})\r\n    .less('resources/less/footer.less', 'public/css/footer.css')\r\n    .options({processCssUrls: false})\r\n    .sourceMaps();\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/webpack.mix.js b/webpack.mix.js
+--- a/webpack.mix.js	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/webpack.mix.js	(date 1621458279861)
+@@ -22,6 +22,12 @@
+     .options({processCssUrls: false})
+     .less('resources/less/about.less', 'public/css/about.css')
+     .options({processCssUrls: false})
++    .less('resources/less/container.less', 'public/css/container.css')
++    .options({processCssUrls: false})
++    .less('resources/less/news.less', 'public/css/news.css')
++    .options({processCssUrls: false})
++    .less('resources/less/products.less', 'public/css/products.css')
++    .options({processCssUrls: false})
+     .less('resources/less/footer.less', 'public/css/footer.css')
+     .options({processCssUrls: false})
+     .sourceMaps();
+Index: resources/js/slider.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>$(document).ready(function() {\r\n\r\n    $(\"#owl-demo\").owlCarousel({\r\n        autoPlay : 3000,\r\n        stopOnHover : true,\r\n        navigation:true,\r\n        paginationSpeed : 1000,\r\n        goToFirstSpeed : 2000,\r\n        loop: true,\r\n        autoplay: true,\r\n        autoplayTimeout: 10000,\r\n        smartSpeed: 1000,\r\n        singleItem : true,\r\n        items : 1,\r\n        autoHeight : true,\r\n        transitionStyle:\"fade\"\r\n    });\r\n\r\n    $(\"#categories\").owlCarousel({\r\n        stagePadding: 50,\r\n        loop:true,\r\n        margin:10,\r\n        responsiveClass:true,\r\n        responsive:{\r\n            0:{\r\n                items:1,\r\n                nav:false\r\n            },\r\n            600:{\r\n                items:2,\r\n                nav:false\r\n            },\r\n            1000:{\r\n                items:3,\r\n                nav:true,\r\n                loop:false\r\n            }\r\n        }\r\n    })\r\n    $(\"#categories1\").owlCarousel({\r\n        stagePadding: 50,\r\n        loop:true,\r\n        margin:10,\r\n        responsiveClass:true,\r\n        responsive:{\r\n            0:{\r\n                items:1,\r\n                nav:false\r\n            },\r\n            600:{\r\n                items:2,\r\n                nav:false\r\n            },\r\n            1000:{\r\n                items:3,\r\n                nav:true,\r\n                loop:false\r\n            }\r\n        }\r\n    })\r\n    $(\"#categories_news\").owlCarousel({\r\n        stagePadding: 50,\r\n        loop:true,\r\n        margin:20,\r\n        responsiveClass:true,\r\n        responsive:{\r\n            0:{\r\n                items:1,\r\n                nav:false\r\n            },\r\n            600:{\r\n                items:2,\r\n                nav:false\r\n            },\r\n            900:{\r\n                items:2,\r\n                nav:false,\r\n            },\r\n            1000:{\r\n                items:3,\r\n                nav:true,\r\n                loop:false\r\n            }\r\n        }\r\n    })\r\n});\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/js/slider.js b/resources/js/slider.js
+--- a/resources/js/slider.js	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/resources/js/slider.js	(date 1621449897267)
+@@ -68,14 +68,10 @@
+                 items:1,
+                 nav:false
+             },
+-            600:{
++            768:{
+                 items:2,
+                 nav:false
+             },
+-            900:{
+-                items:2,
+-                nav:false,
+-            },
+             1000:{
+                 items:3,
+                 nav:true,
+Index: resources/views/products.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/views/products.blade.php b/resources/views/products.blade.php
+new file mode 100644
+--- /dev/null	(date 1621461751769)
++++ b/resources/views/products.blade.php	(date 1621461751769)
+@@ -0,0 +1,95 @@
++@extends('welcome')
++@section('content')
++    <link rel="stylesheet" href=" {{ asset('public/css/products.css') }}">
++    <div class="container">
++        <div class="page_name">
++            <h1 class="name_head">Хліб класичний</h1>
++            <hr class="name_line">
++        </div>
++    </div>
++    <div class="wrap_divs">
++        <div class="product">
++            <div class="prod_img">
++                <img  src="public/images/prod_1.png">
++            </div>
++            <div class="prod_1">
++                <div class="prod_name">Хліб білий</div>
++                <div class="prod_price">20₴</div>
++            </div>
++            <div class="prod_2">
++                <div class="stars"></div>
++                <button class="buy"></button>
++            </div>
++        </div>
++        <div class="product">
++            <div class="prod_img">
++                <img  src="public/images/prod_2.png">
++            </div>
++            <div class="prod_1">
++                <div class="prod_name">Цеглинка біла</div>
++                <div class="prod_price">18₴</div>
++            </div>
++            <div class="prod_2">
++                <div class="stars"></div>
++                <button class="buy"></button>
++            </div>
++        </div>
++        <div class="product">
++            <div class="prod_img">
++                <img  src="public/images/prod_3.png">
++            </div>
++            <div class="prod_1">
++                <div class="prod_name">Багет звичайний</div>
++                <div class="prod_price">18₴</div>
++            </div>
++            <div class="prod_2">
++                <div class="stars"></div>
++                <button class="buy"></button>
++            </div>
++        </div>
++        <div class="product">
++            <div class="prod_img">
++                <img  src="public/images/prod_4.png">
++            </div>
++            <div class="prod_1">
++                <div class="prod_name">Хліб гарбузовий</div>
++                <div class="prod_price">18₴</div>
++            </div>
++            <div class="prod_2">
++                <div class="stars"></div>
++                <button class="buy"></button>
++            </div>
++        </div>
++        <div class="product">
++            <div class="prod_img">
++                <img  src="public/images/prod_5.png">
++            </div>
++            <div class="prod_1">
++                <div class="prod_name">Хліб цільнозерновий</div>
++                <div class="prod_price">18₴</div>
++            </div>
++            <div class="prod_2">
++                <div class="stars"></div>
++                <button class="buy"></button>
++            </div>
++        </div>
++        <div class="product">
++            <div class="prod_img">
++                <img  src="public/images/prod_6.png">
++            </div>
++            <div class="prod_1">
++                <div class="prod_name">Чіабатта</div>
++                <div class="prod_price">18₴</div>
++            </div>
++            <div class="prod_2">
++                <div class="stars"></div>
++                <button class="buy"></button>
++            </div>
++        </div>
++    </div>
++    <div class="see_more_button_div">
++        <button class="see_more_button">
++            Показати більше
++        </button>
++    </div>
++@endsection
+Index: resources/views/about.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@extends('welcome')\r\n@section('content')\r\n    <link rel=\"stylesheet\" href=\" {{ asset('public/css/about.css') }}\">\r\n    <div class=\"container-md\">\r\n        <div class=\"page_name\">\r\n            <h1 class=\"name_head\">Про нас</h1>\r\n            <hr class=\"name_line\">\r\n        </div>\r\n        <div class=\"wrap_about_info\">\r\n            <div class=\"div_about_1\">\r\n                <div class=\"ab_text1\">\r\n                    <p>\r\n                        Історія Bakery розпочалася в 2011 році,\r\n                        коли ринковий кіоск був покладений з домашнього печеного печива.\r\n                        З тих пір ми трохи виросли, але наші цінності ніколи не змінювались.\r\n                    </p>\r\n                    <p>\r\n                        Створюючи в нашому домі Хакні, ми все ще використовуємо лише\r\n                        найсвіжіші натуральні інгредієнти і випікаємо лише ті смаки,\r\n                        які ми любимо найбільше.\r\n                    </p>\r\n                </div>\r\n                <img class=\"about_3\" src=\"public/images/about_3.png\">\r\n            </div>\r\n            <div class=\"wrapper\">\r\n                <div class=\"div_about_2\">\r\n                    <img class=\"about_2\" src=\"public/images/about_2.png\">\r\n                    <div class=\"ab_text2\">\r\n                        <p>\r\n                            Наша пристрасть до випічки та увага до деталей відрізняє нас.\r\n                            Ми поєднуємо традиції з інноваціями, створюючи нові класики та\r\n                            привносячи східно-лондонський колорит до улюбленої класики.\r\n                        </p>\r\n                        <p>\r\n                            Ми тісна група, об’єднана спільною справою: збирати найкращі\r\n                            ідеї у світовій випічці та ділитися ними з рідним містом.\r\n                        </p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"div_about_3\">\r\n                <div class=\"ab_text3\">\r\n                    <p>\r\n                        Пекарня готова виконати і індивідуальні замовлення на торти,\r\n                        кондитерські вироби, організувати доставку замовлення до\r\n                        будь-якого свята, дружній зустрічі, весілля або іншої події.\r\n                        Жоден захід не буде занадто маленьким або великим для наших кухарів!\r\n                        Все, що ми робимо, робиться від серця нашими руками.\r\n                    </p>\r\n                </div>\r\n                <img class=\"about_1\" src=\"public/images/about_1.png\">\r\n            </div>\r\n        </div>\r\n    </div>\r\n@endsection\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/views/about.blade.php b/resources/views/about.blade.php
+--- a/resources/views/about.blade.php	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/resources/views/about.blade.php	(date 1621448149595)
+@@ -1,7 +1,7 @@
+ @extends('welcome')
+ @section('content')
+     <link rel="stylesheet" href=" {{ asset('public/css/about.css') }}">
+-    <div class="container-md">
++    <div class="">
+         <div class="page_name">
+             <h1 class="name_head">Про нас</h1>
+             <hr class="name_line">
+Index: resources/less/news.less
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/less/news.less b/resources/less/news.less
+new file mode 100644
+--- /dev/null	(date 1621461023471)
++++ b/resources/less/news.less	(date 1621461023471)
+@@ -0,0 +1,156 @@
++.item1{
++        justify-content: center;
++        width: 273px;
++        height: 484px;
++        margin: 15px;
++        background: #FFFFFF;
++        box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.36);
++}
++.news_h{
++    min-width: 111px;
++    max-width: 203px;
++    width: 100%;
++    font-family: Raleway;
++    text-align: center;
++    font-style: normal;
++    font-weight: 600;
++    font-size: 20px;
++    line-height: 23px;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    color: #5E5E5E;
++    padding: 36px 0px;
++    margin: auto;
++}
++
++.news_t{
++    max-width: 203px;
++    min-width: 179px;
++    width: 100%;
++    font-family: Raleway;
++    font-style: normal;
++    font-weight: 600;
++    font-size: 12px;
++    line-height: 14px;
++    display: flex;
++    align-items: center;
++    padding-top: 40px;
++    //padding: 20px 0px 40px 36px;
++    margin: auto;
++    color: rgba(94, 94, 94, 0.88);
++}
++.news_photo{
++    display: block;
++    max-width: 203px;
++    height: 190px;
++    margin: auto;
++    min-width: 170px;
++    width: 100%;
++}
++.more{
++    font-family: Raleway;
++    font-style: normal;
++    font-weight: 600;
++    font-size: 18px;
++    line-height: 21px;
++    display: flex;
++    align-items: center;
++    color: rgba(94, 94, 94, 0.7);
++}
++.more_wrap{
++    display: flex;
++    flex-direction: row;
++    justify-content: left;
++    max-width: 134px;
++    width: 100%;
++    padding-top: 40px;
++    margin-left: 30px;
++}
++.wrap_divs{
++    display: flex;
++    flex-direction: row;
++    //justify-content: center;
++    align-items: center;
++    flex-wrap: wrap;
++    margin: auto;
++    padding: 50px 0px;
++    width: 909px;
++    flex-basis: 33.333333%
++}
++.cont{
++    justify-content: center;
++    align-items: center;
++}
++.page_name{
++    display: flex;
++    flex-direction: column;
++    justify-content: left;
++    align-items: center;
++}
++.name_head{
++    font-family: Caveat;
++    font-style: normal;
++    font-weight: normal;
++    //line-height: 81px;
++    display: flex;
++    align-items: center;
++    color: #000000;
++    font-size: 50px;
++    margin-top: 50px;
++}
++.name_line{
++    max-width: 933px;
++    transform: rotate(0.01deg);
++    width: 100%;
++    border: none;
++    height: 0.1px;
++    background: #D1D1D1;
++}
++.title_line{
++    text-align: center;
++    align-items: center;
++    margin-top: 15px;
++}
++.see_more_button{
++    width: 400px;
++    height: 63px;
++
++    background: #FFFFFF;
++    border: 1px solid rgba(0, 0, 0, 0.44);
++    box-sizing: border-box;
++    border-radius: 50px;
++
++    font-family: 'Caveat', cursive;
++    font-style: normal;
++    font-weight: normal;
++    font-size: 36px;
++    line-height: 45px;
++
++    color: rgba(0, 0, 0, 0.43);
++
++}
++.see_more_button_div{
++    text-align: center;
++    align-items: center;
++    margin-bottom: 100px;
++}
++@media (max-width: 990px){
++    .see_more_button{
++        width: 200px;
++        height: 32px;
++        font-size: 24px;
++        line-height: 30px;
++    }
++    .wrap_divs{
++        width: 606px;
++    }
++}
++@media (max-width: 665px){
++    .wrap_divs{
++        width: 303px;
++    }
++    .name_head{
++        font-size: 36px;
++    }
++}
+Index: resources/views/news.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/views/news.blade.php b/resources/views/news.blade.php
+new file mode 100644
+--- /dev/null	(date 1621453200480)
++++ b/resources/views/news.blade.php	(date 1621453200480)
+@@ -0,0 +1,80 @@
++@extends('welcome')
++@section('content')
++    <link rel="stylesheet" href=" {{ asset('public/css/news.css') }}">
++    <div class="container">
++        <div class="page_name">
++            <h1 class="name_head">Новини</h1>
++            <hr class="name_line">
++        </div>
++    </div>
++    <div class="wrap_divs">
++        <div class="item1">
++            <h1 class="news_h">Різдвяна пропозиція</h1>
++            <img class="news_photo" src="public/images/news_ph.png">
++            <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
++            <div class="more_wrap">
++                <a class="more">Детальніше</a>
++                <img src="public/images/arrow.svg">
++            </div>
++        </div>
++        <div class="item1">
++            <h1 class="news_h">Різдвяна пропозиція</h1>
++            <img class="news_photo" src="public/images/news_ph.png">
++            <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
++            <div class="more_wrap">
++                <a class="more">Детальніше</a>
++                <img src="public/images/arrow.svg">
++            </div>
++        </div>
++        <div class="item1">
++            <h1 class="news_h">Різдвяна пропозиція</h1>
++            <img class="news_photo" src="public/images/news_ph.png">
++            <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
++            <div class="more_wrap">
++                <a class="more">Детальніше</a>
++                <img src="public/images/arrow.svg">
++            </div>
++        </div>
++        <div class="item1">
++            <h1 class="news_h">Різдвяна пропозиція</h1>
++            <img class="news_photo" src="public/images/news_ph.png">
++            <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
++            <div class="more_wrap">
++                <a class="more">Детальніше</a>
++                <img src="public/images/arrow.svg">
++            </div>
++        </div>
++        <div class="item1">
++            <h1 class="news_h">Різдвяна пропозиція</h1>
++            <img class="news_photo" src="public/images/news_ph.png">
++            <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
++            <div class="more_wrap">
++                <a class="more">Детальніше</a>
++                <img src="public/images/arrow.svg">
++            </div>
++        </div>
++        <div class="item1">
++            <h1 class="news_h">Різдвяна пропозиція</h1>
++            <img class="news_photo" src="public/images/news_ph.png">
++            <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
++            <div class="more_wrap">
++                <a class="more">Детальніше</a>
++                <img src="public/images/arrow.svg">
++            </div>
++        </div>
++        <div class="item1">
++            <h1 class="news_h">Різдвяна пропозиція</h1>
++            <img class="news_photo" src="public/images/news_ph.png">
++            <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
++            <div class="more_wrap">
++                <a class="more">Детальніше</a>
++                <img src="public/images/arrow.svg">
++            </div>
++        </div>
++    </div>
++    <div class="see_more_button_div">
++        <button class="see_more_button">
++            Показати більше
++        </button>
++    </div>
++@endsection
+Index: resources/less/contacts.less
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.page_name{\r\n    font-family: Caveat;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    //line-height: 81px;\r\n    display: flex;\r\n    align-items: center;\r\n    color: #000000;\r\n}\r\n.name_head{\r\n    font-size: 50px;\r\n    margin-top: 50px;\r\n}\r\n.page_name{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n.name_line{\r\n    max-width: 933px;\r\n    transform: rotate(0.01deg);\r\n    width: 100%;\r\n    border: none;\r\n    height: 0.1px;\r\n    background: #D1D1D1;\r\n}\r\n.dem_scr{\r\n    max-width: 1000px;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.contacts_name{\r\n    font-family: Caveat;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 40px;\r\n    line-height: 60px;\r\n    display: flex;\r\n    align-items: center;\r\n    color: #000000;\r\n    margin: auto;\r\n    padding: 20px 0px 20px 0px;\r\n}\r\n.wrap_timetable{\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-between;\r\n    max-width: 630px;\r\n    width: 100%;\r\n    padding: 0px 0px 40px 0px;\r\n}\r\n.wrap_timetable span{\r\n    font-size: 30px;\r\n    line-height: 45px;\r\n}\r\n.contacts_wrap{\r\n    margin: 40px auto 150px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-between;\r\n    max-width: 1000px;\r\n    width: 100%;\r\n    font-size: 30px;\r\n    line-height: 45px;\r\n}\r\n.div1, .div3{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    min-height: 115px;\r\n    height: 100%;\r\n}\r\n.div2{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    max-height: 115px;\r\n    margin-top: 5px;\r\n}\r\n.c_ph{\r\n    height: 40px;\r\n    width: 40px;\r\n}\r\n.c_em{\r\n    height: 30px;\r\n    width: 40px;\r\n}\r\n.c_loc{\r\n    height: 48px;\r\n    width: 46px;\r\n}\r\n@media (max-width: 1040px) {\r\n    .dem_scr{\r\n        min-width: 256px;\r\n    }\r\n}\r\n@media (max-width: 992px){\r\n    .contacts_name{\r\n        font-size: 30px;\r\n    }\r\n    .name_head{\r\n        font-size: 36px;\r\n    }\r\n    .contacts_wrap{\r\n        font-size: 20px;\r\n    }\r\n    .div1, .div3{\r\n        min-height: 100px;\r\n        height: 100%;\r\n    }\r\n    .div2{\r\n        height: 95px;\r\n    }\r\n}\r\n@media (max-width: 540px){\r\n    .contacts_wrap{\r\n        flex-direction: column;\r\n        font-size: 24px;\r\n    }\r\n    .wrap_timetable{\r\n        flex-direction: column;\r\n        justify-content: center;\r\n        align-items: center;\r\n    }\r\n    .wrap_timetable span{\r\n        font-size: 24px;\r\n    }\r\n    .div1, .div3{\r\n        flex-direction: row;\r\n    }\r\n    .div2{\r\n        flex-direction: row;\r\n    }\r\n    .contacts_wrap{\r\n        margin-top: 15px;\r\n        margin-bottom: 15px;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/less/contacts.less b/resources/less/contacts.less
+--- a/resources/less/contacts.less	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/resources/less/contacts.less	(date 1621453544351)
+@@ -137,4 +137,5 @@
+         margin-top: 15px;
+         margin-bottom: 15px;
+     }
++
+ }
+Index: public/mix-manifest.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n    \"/js/app.js\": \"/js/app.js\",\r\n    \"/js/slider.js\": \"/js/slider.js\",\r\n    \"/css/app.css\": \"/css/app.css\",\r\n    \"/css/footer.css\": \"/css/footer.css\",\r\n    \"/css/about.css\": \"/css/about.css\",\r\n    \"/css/contacts.css\": \"/css/contacts.css\",\r\n    \"/css/landing.css\": \"/css/landing.css\",\r\n    \"/css/header.css\": \"/css/header.css\"\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/mix-manifest.json b/public/mix-manifest.json
+--- a/public/mix-manifest.json	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/public/mix-manifest.json	(date 1621462226537)
+@@ -2,9 +2,12 @@
+     "/js/app.js": "/js/app.js",
+     "/js/slider.js": "/js/slider.js",
+     "/css/app.css": "/css/app.css",
+-    "/css/footer.css": "/css/footer.css",
++    "/css/container.css": "/css/container.css",
+     "/css/about.css": "/css/about.css",
+     "/css/contacts.css": "/css/contacts.css",
+     "/css/landing.css": "/css/landing.css",
+-    "/css/header.css": "/css/header.css"
++    "/css/header.css": "/css/header.css",
++    "/css/footer.css": "/css/footer.css",
++    "/css/products.css": "/css/products.css",
++    "/css/news.css": "/css/news.css"
+ }
+Index: public/js/app.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/js/app.js b/public/js/app.js
+--- a/public/js/app.js	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/public/js/app.js	(date 1621459375116)
+@@ -355,6 +355,39 @@
+ 
+ /***/ }),
+ 
++/***/ "./resources/less/news.less":
++/*!**********************************!*\
++  !*** ./resources/less/news.less ***!
++  \**********************************/
++/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
++
++"use strict";
++eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvbGVzcy9uZXdzLmxlc3M/ZjljMiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEiLCJmaWxlIjoiLi9yZXNvdXJjZXMvbGVzcy9uZXdzLmxlc3MuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/less/news.less\n");
++
++/***/ }),
++
++/***/ "./resources/less/products.less":
++/*!**************************************!*\
++  !*** ./resources/less/products.less ***!
++  \**************************************/
++/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
++
++"use strict";
++eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvbGVzcy9wcm9kdWN0cy5sZXNzPzY5MDQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL2xlc3MvcHJvZHVjdHMubGVzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/less/products.less\n");
++
++/***/ }),
++
++/***/ "./resources/less/footer.less":
++/*!************************************!*\
++  !*** ./resources/less/footer.less ***!
++  \************************************/
++/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
++
++"use strict";
++eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvbGVzcy9mb290ZXIubGVzcz8yOTgzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSIsImZpbGUiOiIuL3Jlc291cmNlcy9sZXNzL2Zvb3Rlci5sZXNzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/less/footer.less\n");
++
++/***/ }),
++
+ /***/ "./resources/sass/app.scss":
+ /*!*********************************!*\
+   !*** ./resources/sass/app.scss ***!
+@@ -362,7 +395,7 @@
+ /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ 
+ "use strict";
+-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2Nzcz9iMjdiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSIsImZpbGUiOiIuL3Jlc291cmNlcy9zYXNzL2FwcC5zY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/app.scss\n");
++eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2Nzcz8xZGYxIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSIsImZpbGUiOiIuL3Jlc291cmNlcy9zYXNzL2FwcC5zY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/app.scss\n");
+ 
+ /***/ }),
+ 
+@@ -410,14 +443,14 @@
+ 
+ /***/ }),
+ 
+-/***/ "./resources/less/footer.less":
+-/*!************************************!*\
+-  !*** ./resources/less/footer.less ***!
+-  \************************************/
++/***/ "./resources/less/container.less":
++/*!***************************************!*\
++  !*** ./resources/less/container.less ***!
++  \***************************************/
+ /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+ 
+ "use strict";
+-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvbGVzcy9mb290ZXIubGVzcz9kYzMyIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSIsImZpbGUiOiIuL3Jlc291cmNlcy9sZXNzL2Zvb3Rlci5sZXNzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/less/footer.less\n");
++eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvbGVzcy9jb250YWluZXIubGVzcz85Mjk3Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSIsImZpbGUiOiIuL3Jlc291cmNlcy9sZXNzL2NvbnRhaW5lci5sZXNzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/less/container.less\n");
+ 
+ /***/ }),
+ 
+@@ -565,11 +598,14 @@
+ /******/ 		var installedChunks = {
+ /******/ 			"/js/app": 0,
+ /******/ 			"css/app": 0,
+-/******/ 			"css/footer": 0,
++/******/ 			"css/container": 0,
+ /******/ 			"css/about": 0,
+ /******/ 			"css/contacts": 0,
+ /******/ 			"css/landing": 0,
+-/******/ 			"css/header": 0
++/******/ 			"css/header": 0,
++/******/ 			"css/footer": 0,
++/******/ 			"css/products": 0,
++/******/ 			"css/news": 0
+ /******/ 		};
+ /******/ 		
+ /******/ 		// no chunk on demand loading
+@@ -617,13 +653,16 @@
+ /******/ 	// startup
+ /******/ 	// Load entry module and return exports
+ /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+-/******/ 	__webpack_require__.O(undefined, ["css/app","css/footer","css/about","css/contacts","css/landing","css/header"], () => (__webpack_require__("./resources/js/app.js")))
+-/******/ 	__webpack_require__.O(undefined, ["css/app","css/footer","css/about","css/contacts","css/landing","css/header"], () => (__webpack_require__("./resources/less/header.less")))
+-/******/ 	__webpack_require__.O(undefined, ["css/app","css/footer","css/about","css/contacts","css/landing","css/header"], () => (__webpack_require__("./resources/less/landing.less")))
+-/******/ 	__webpack_require__.O(undefined, ["css/app","css/footer","css/about","css/contacts","css/landing","css/header"], () => (__webpack_require__("./resources/less/contacts.less")))
+-/******/ 	__webpack_require__.O(undefined, ["css/app","css/footer","css/about","css/contacts","css/landing","css/header"], () => (__webpack_require__("./resources/less/about.less")))
+-/******/ 	__webpack_require__.O(undefined, ["css/app","css/footer","css/about","css/contacts","css/landing","css/header"], () => (__webpack_require__("./resources/less/footer.less")))
+-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/footer","css/about","css/contacts","css/landing","css/header"], () => (__webpack_require__("./resources/sass/app.scss")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/js/app.js")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/less/header.less")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/less/landing.less")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/less/contacts.less")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/less/about.less")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/less/container.less")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/less/news.less")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/less/products.less")))
++/******/ 	__webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/less/footer.less")))
++/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/container","css/about","css/contacts","css/landing","css/header","css/footer","css/products","css/news"], () => (__webpack_require__("./resources/sass/app.scss")))
+ /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+ /******/ 	
+ /******/ })()
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"07f3425a-71ad-461f-a23e-3ee0d1b8ac20\" name=\"Default Changelist\" comment=\"finished contacts\">\r\n      <change afterPath=\"$PROJECT_DIR$/public/images/about_1.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/public/images/about_2.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/public/images/about_3.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/resources/less/about.less\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/resources/views/about.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/public/js/app.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/public/js/app.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/public/mix-manifest.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/public/mix-manifest.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/less/contacts.less\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/less/contacts.less\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/includes/header.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/includes/header.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/resources/views/welcome.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/welcome.blade.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/routes/web.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/routes/web.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webpack.mix.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webpack.mix.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\" doNotAsk=\"true\" synchronizationState=\"SYNCHRONIZE\">\r\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <excluded-from-favorite>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"LOCAL\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"master\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </excluded-from-favorite>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"PhpWorkspaceProjectConfiguration\">\r\n    <include_path>\r\n      <path value=\"$PROJECT_DIR$/vendor/ramsey/uuid\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/filp/whoops\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ramsey/collection\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-mbstring\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/fakerphp/faker\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpoption/phpoption\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/webmozart/assert\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/deprecation-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/finder\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-client-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/routing\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/css-selector\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php80\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-ctype\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/mime\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/ralouphie/getallheaders\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/error-handler\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php72\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-message\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php73\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/promises\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/simple-cache\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/log\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/console\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/diff\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/guzzle\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/event-dispatcher\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/type\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/psr7\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-client\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/object-enumerator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psr/container\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-iconv\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/lines-of-code\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-foundation\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/code-unit\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-dumper\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/comparator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/asm89/stack-cors\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/cli-parser\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-kernel\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/exporter\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/string\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/complexity\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/service-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/version\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/league/commonmark\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/process\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/resource-operations\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/graham-campbell/result-type\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/recursion-context\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/league/flysystem\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/environment\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/league/mime-type-detection\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/global-state\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/object-reflector\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/brick/math\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/sail\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/tinker\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/framework\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/opis/closure\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/monolog/monolog\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpspec/prophecy\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/nikic/php-parser\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/hamcrest/hamcrest-php\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/voku/portable-ascii\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/facade/flare-client-php\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/facade/ignition-contracts\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/facade/ignition\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/psy/psysh\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/nesbot/carbon\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/theseer/tokenizer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/nunomaduro/collision\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/mockery/mockery\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/dragonmantank/cron-expression\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/lexer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/inflector\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/instantiator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/vlucas/phpdotenv\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-code-coverage\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-text-template\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/phpunit\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-file-iterator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/type-resolver\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-invoker\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-timer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-common\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/myclabs/deep-copy\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/swiftmailer/swiftmailer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/egulias/email-validator\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phar-io/version\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/phar-io/manifest\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/fideloper/proxy\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/fruitcake/laravel-cors\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/laravel/ui\" />\r\n    </include_path>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedIndex\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1rtaIOhNPWVHq85c5DcY5VY82Vw\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/public/images\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"watcher.settings\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Bitnami\\wampstack-8.0.3-1\\apache2\\htdocs\\Bakery\\public\\images\" />\r\n      <recent name=\"C:\\Bitnami\\wampstack-8.0.3-1\\apache2\\htdocs\\Bakery\\resources\\js\" />\r\n      <recent name=\"C:\\Bitnami\\wampstack-8.0.3-1\\apache2\\htdocs\\Bakery\\resources\\css\" />\r\n      <recent name=\"C:\\Bitnami\\wampstack-8.0.3-1\\apache2\\htdocs\\Bakery\" />\r\n      <recent name=\"C:\\Bitnami\\wampstack-8.0.3-1\\apache2\\htdocs\\Bakery\\public\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Bitnami\\wampstack-8.0.3-1\\apache2\\htdocs\\Bakery\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"phpunit.xml\" type=\"PHPUnitRunConfigurationType\" factoryName=\"PHPUnit\">\r\n      <TestRunner scope=\"XML\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration>C:\\Users\\Ulyana\\AppData\\Roaming\\Subversion</configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"07f3425a-71ad-461f-a23e-3ee0d1b8ac20\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1619797760016</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1619797760016</updated>\r\n      <workItem from=\"1619797761895\" duration=\"1727000\" />\r\n      <workItem from=\"1619865494211\" duration=\"4219000\" />\r\n      <workItem from=\"1620043956379\" duration=\"35420000\" />\r\n      <workItem from=\"1620081610589\" duration=\"5000\" />\r\n      <workItem from=\"1620153484367\" duration=\"2356000\" />\r\n      <workItem from=\"1620210744786\" duration=\"39000\" />\r\n      <workItem from=\"1620314120362\" duration=\"24249000\" />\r\n      <workItem from=\"1620344353888\" duration=\"577000\" />\r\n      <workItem from=\"1620386548429\" duration=\"12838000\" />\r\n      <workItem from=\"1620929854740\" duration=\"1708000\" />\r\n      <workItem from=\"1620936771030\" duration=\"677000\" />\r\n      <workItem from=\"1620971042053\" duration=\"26440000\" />\r\n      <workItem from=\"1621075206905\" duration=\"1523000\" />\r\n      <workItem from=\"1621160903977\" duration=\"19865000\" />\r\n      <workItem from=\"1621184087724\" duration=\"3171000\" />\r\n      <workItem from=\"1621194812868\" duration=\"2357000\" />\r\n      <workItem from=\"1621242621819\" duration=\"9354000\" />\r\n      <workItem from=\"1621281196333\" duration=\"6679000\" />\r\n      <workItem from=\"1621328842286\" duration=\"598000\" />\r\n      <workItem from=\"1621348305122\" duration=\"1799000\" />\r\n      <workItem from=\"1621413428836\" duration=\"18634000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"initial commit\">\r\n      <created>1619799435160</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619799435162</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"cccc\">\r\n      <created>1619866812282</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619866812282</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"welcome\">\r\n      <created>1619867166073</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1619867166073</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"header without layout menu\">\r\n      <created>1620153630674</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620153630674</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"header without layout menu\">\r\n      <created>1620314225211</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620314225212</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"header with layout menu\">\r\n      <created>1620329475502</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620329475502</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"header with layout menu\">\r\n      <created>1620329489345</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620329489345</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"unadaptive footer\">\r\n      <created>1620344478479</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620344478479</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"finished adaptive footer\">\r\n      <created>1620429043872</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620429043872</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"finished landing\">\r\n      <created>1621255801679</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1621255801679</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"finished contacts\">\r\n      <created>1621423756948</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1621423756948</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"12\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"initial commit\" />\r\n    <MESSAGE value=\"cccc\" />\r\n    <MESSAGE value=\"welcome\" />\r\n    <MESSAGE value=\"header without layout menu\" />\r\n    <MESSAGE value=\"header with layout menu\" />\r\n    <MESSAGE value=\"unadaptive footer\" />\r\n    <MESSAGE value=\"finished adaptive footer\" />\r\n    <MESSAGE value=\"finished landing\" />\r\n    <MESSAGE value=\"finished contacts\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"finished contacts\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/.idea/workspace.xml	(date 1621464779979)
+@@ -1,18 +1,28 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="finished contacts">
+-      <change afterPath="$PROJECT_DIR$/public/images/about_1.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/public/images/about_2.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/public/images/about_3.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/resources/less/about.less" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
++    <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="finished about_us">
++      <change afterPath="$PROJECT_DIR$/public/images/cat_all.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/images/prod_1.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/images/prod_2.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/images/prod_3.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/images/prod_4.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/images/prod_5.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/public/images/prod_6.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/resources/less/container.less" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/resources/less/news.less" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/resources/less/products.less" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/resources/views/container.blade.php" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/slider.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/less/about.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/about.less" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/resources/less/contacts.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/contacts.less" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+     </list>
+@@ -236,7 +246,7 @@
+       <workItem from="1621281196333" duration="6679000" />
+       <workItem from="1621328842286" duration="598000" />
+       <workItem from="1621348305122" duration="1799000" />
+-      <workItem from="1621413428836" duration="18634000" />
++      <workItem from="1621413428836" duration="37380000" />
+     </task>
+     <task id="LOCAL-00001" summary="initial commit">
+       <created>1619799435160</created>
+@@ -315,7 +325,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1621423756948</updated>
+     </task>
+-    <option name="localTasksCounter" value="12" />
++    <task id="LOCAL-00012" summary="finished about_us">
++      <created>1621439620750</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1621439620750</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -343,6 +360,7 @@
+     <MESSAGE value="finished adaptive footer" />
+     <MESSAGE value="finished landing" />
+     <MESSAGE value="finished contacts" />
+-    <option name="LAST_COMMIT_MESSAGE" value="finished contacts" />
++    <MESSAGE value="finished about_us" />
++    <option name="LAST_COMMIT_MESSAGE" value="finished about_us" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: resources/less/container.less
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/less/container.less b/resources/less/container.less
+new file mode 100644
+--- /dev/null	(date 1621453482152)
++++ b/resources/less/container.less	(date 1621453482152)
+@@ -0,0 +1,81 @@
++.item1{
++    max-width: 295px;
++    width: 100%;
++    height: 190px;
++    text-align: center;
++    margin: 15px;
++    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
++}
++.wrap_divs{
++    display: flex;
++    flex-direction: row;
++    //justify-content: center;
++    align-items: center;
++    flex-wrap: wrap;
++    margin: auto;
++    padding: 50px 0px;
++    width: 975px;
++    flex-basis: 33.333333%
++}
++.cont{
++    justify-content: center;
++    align-items: center;
++}
++.page_name{
++    display: flex;
++    flex-direction: column;
++    justify-content: left;
++    align-items: center;
++}
++.name_head{
++    font-family: Caveat;
++    font-style: normal;
++    font-weight: normal;
++    //line-height: 81px;
++    display: flex;
++    align-items: center;
++    color: #000000;
++    font-size: 50px;
++    margin-top: 50px;
++}
++.name_line{
++    max-width: 933px;
++    transform: rotate(0.01deg);
++    width: 100%;
++    border: none;
++    height: 0.1px;
++    background: #D1D1D1;
++}
++.title_line{
++    text-align: center;
++    align-items: center;
++    margin-top: 15px;
++}
++.cat_text{
++    position: relative;
++    font-family: Caveat;
++    font-style: normal;
++    font-weight: normal;
++    font-size: 36px;
++    line-height: 45px;
++    display: flex;
++    justify-content: center;
++    width: 100%;
++    color: #FFFFFF;
++    margin: auto;
++    top: 40.3%;
++    bottom: 40.3%;
++}
++@media (max-width: 990px){
++    .wrap_divs{
++        width: 650px;
++    }
++}
++@media (max-width: 665px){
++    .name_head{
++        font-size: 36px;
++    }
++    .wrap_divs{
++        width: 315px;
++    }
++}
+Index: resources/views/container.blade.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/views/container.blade.php b/resources/views/container.blade.php
+new file mode 100644
+--- /dev/null	(date 1621447796449)
++++ b/resources/views/container.blade.php	(date 1621447796449)
+@@ -0,0 +1,21 @@
++@extends('welcome')
++@section('content')
++    <link rel="stylesheet" href=" {{ asset('public/css/container.css') }}">
++    <div class="cont">
++        <div class="container">
++            <div class="page_name">
++                <h1 class="name_head">Меню</h1>
++                <hr class="name_line">
++            </div>
++        </div>
++        <div class="wrap_divs">
++            <div class="item1" style="background: url('public/images/cat_all.png') center center no-repeat;"><p class="cat_text">Все меню</p></div>
++            <div class="item1" style="background: url('public/images/cat_1.png') center center no-repeat;"><p class="cat_text">Хліб класичний</p></div>
++            <div class="item1" style="background: url('public/images/cat_2.png') center center no-repeat;"><p class="cat_text">Здобна випічка</p></div>
++            <div class="item1" style="background: url('public/images/cat_3.png') center center no-repeat;"><p class="cat_text">Веганська випічка</p></div>
++            <div class="item1" style="background: url('public/images/cat_4.png') center center no-repeat;"><p class="cat_text">Пироги</p></div>
++            <div class="item1" style="background: url('public/images/cat_5.png') center center no-repeat;"><p class="cat_text">Хліб класичний</p></div>
++            <div class="item1" style="background: url('public/images/cat_6.png') center center no-repeat;"><p class="cat_text">Хліб класичний</p></div>
++        </div>
++    </div>
++@endsection
+Index: resources/less/about.less
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.page_name{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n.name_head{\r\n     font-family: Caveat;\r\n     font-style: normal;\r\n     font-weight: normal;\r\n     //line-height: 81px;\r\n     display: flex;\r\n     align-items: center;\r\n     color: #000000;\r\n     font-size: 50px;\r\n     margin-top: 50px;\r\n }\r\n.name_line{\r\n    max-width: 933px;\r\n    transform: rotate(0.01deg);\r\n    width: 100%;\r\n    border: none;\r\n    height: 0.1px;\r\n    background: #D1D1D1;\r\n}\r\n.title_line{\r\n    text-align: center;\r\n    align-items: center;\r\n    margin-top: 15px;\r\n}\r\n.div_about_1, .div_about_2, .div_about_3{\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 65px 45px;\r\n    width: 100%;\r\n    max-width: 1000px;\r\n}\r\n.ab_text1, .ab_text2, .ab_text3{\r\n    font-family: Caveat;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 28px;\r\n    line-height: 35px;\r\n    align-items: center;\r\n    color: #000000;\r\n    max-width: 365px;\r\n    width: 100%;\r\n}\r\n.about_3{\r\n    border-radius: 227.5px;\r\n}\r\n.about_2{\r\n    border-radius: 217px;\r\n}\r\n.about_1{\r\n    border-radius: 191px;\r\n}\r\n.div_about_2{\r\n    max-width: 975px;\r\n    margin: auto;\r\n}\r\n.wrapper{\r\n    background-color: rgba(250, 248, 212, 1);\r\n    margin-bottom: 15px;\r\n    width: 100%;\r\n}\r\n.wrap_about_info{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n@media (max-width: 1040px) {\r\n    .ab_text1, .ab_text2, .ab_text3{\r\n        font-size: 24px;\r\n    }\r\n    .about_3, .about_1, .about_2{\r\n        border-radius: 227.5px;\r\n        max-width: 300px;\r\n        max-height: 300px;\r\n    }\r\n}\r\n@media (max-width: 770px){\r\n    .div_about_1, .div_about_2, .div_about_3{\r\n        padding: 0px 0px 65px 0px;\r\n    }\r\n\r\n}\r\n@media (max-width: 650px){\r\n    .name_head{\r\n        font-size: 36px;\r\n    }\r\n    .ab_text1, .ab_text2, .ab_text3{\r\n        font-size: 18px;\r\n    }\r\n    .div_about_1, .div_about_2, .div_about_3{\r\n        flex-direction: column;\r\n        padding: 0px;\r\n    }\r\n    .about_3{\r\n        min-width: 320px;\r\n        width: 100%;\r\n        height: 233px;\r\n        border-radius: 0px;\r\n        order: 1;\r\n    }\r\n    .about_2{\r\n        width: 296px;\r\n        border-radius: 217px;\r\n    }\r\n    .ab_text1{\r\n        order: 2;\r\n    }\r\n    .ab_text3{\r\n        order: 2;\r\n    }\r\n    .about_1{\r\n        border-radius: 0px;\r\n        order: 1;\r\n        width: 320px;\r\n        height: 307px;\r\n    }\r\n    .ab_text1, .ab_text2, .ab_text3{\r\n        max-width: 300px;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/less/about.less b/resources/less/about.less
+--- a/resources/less/about.less	(revision 15e8a2252e9e56a48693f99f8fa670a2f991a05a)
++++ b/resources/less/about.less	(date 1621448320506)
+@@ -34,8 +34,8 @@
+     justify-content: space-between;
+     align-items: center;
+     padding: 65px 45px;
+-    width: 100%;
+     max-width: 1000px;
++    margin: auto;
+ }
+ .ab_text1, .ab_text2, .ab_text3{
+     font-family: Caveat;
+@@ -62,6 +62,7 @@
+     margin: auto;
+ }
+ .wrapper{
++    align-items: center;
+     background-color: rgba(250, 248, 212, 1);
+     margin-bottom: 15px;
+     width: 100%;
+@@ -83,7 +84,7 @@
+     }
+ }
+ @media (max-width: 770px){
+-    .div_about_1, .div_about_2, .div_about_3{
++    .div_about_1, .div_about_3{
+         padding: 0px 0px 65px 0px;
+     }
+ 
+Index: resources/less/products.less
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/less/products.less b/resources/less/products.less
+new file mode 100644
+--- /dev/null	(date 1621462226185)
++++ b/resources/less/products.less	(date 1621462226185)
+@@ -0,0 +1,117 @@
++.prod_img img{
++    width: 200px;
++    height: 200px;
++}
++.product{
++    font-family: Caveat;
++    font-style: normal;
++    font-weight: normal;
++    font-size: 24px;
++    line-height: 45px;
++    display: flex;
++    flex-direction: column;
++    color: #000000;
++    width: 200px;
++    margin: 15px;
++}
++.prod_1, .prod_2{
++    display: flex;
++    flex-direction: row;
++    justify-content: space-between;
++}
++.buy{
++    background: url("../../public/images/shopping_cart.svg") center center no-repeat;
++    border: none;
++    height: 23px;
++    width: 25px;
++}
++.wrap_divs{
++    display: flex;
++    flex-direction: row;
++    //justify-content: center;
++    flex-wrap: wrap;
++    margin: auto;
++    padding: 50px 0px;
++    width: 690px;
++    flex-basis: 33.333333%
++}
++.page_name{
++    display: flex;
++    flex-direction: column;
++    justify-content: left;
++    align-items: center;
++}
++.name_head{
++    font-family: Caveat;
++    font-style: normal;
++    font-weight: normal;
++    //line-height: 81px;
++    display: flex;
++    align-items: center;
++    color: #000000;
++    font-size: 50px;
++    margin-top: 50px;
++}
++.name_line{
++    max-width: 933px;
++    transform: rotate(0.01deg);
++    width: 100%;
++    border: none;
++    height: 0.1px;
++    background: #D1D1D1;
++}
++.title_line{
++    text-align: center;
++    align-items: center;
++    margin-top: 15px;
++}
++.see_more_button{
++    width: 400px;
++    height: 63px;
++
++    background: #FFFFFF;
++    border: 1px solid #CF8D2E;
++    box-sizing: border-box;
++    border-radius: 50px;
++
++    font-family: 'Caveat', cursive;
++    font-style: normal;
++    font-weight: normal;
++    font-size: 36px;
++    line-height: 45px;
++
++    color: #CF8D2E;
++
++}
++.see_more_button_div{
++    text-align: center;
++    align-items: center;
++    margin-bottom: 100px;
++}
++@media (max-width: 990px){
++    .see_more_button{
++        width: 200px;
++        height: 32px;
++        font-size: 24px;
++        line-height: 30px;
++    }
++    .wrap_divs{
++        width: 460px;
++    }
++}
++@media (max-width: 665px){
++    .wrap_divs{
++        width: 230px;
++    }
++    .name_head{
++        font-size: 36px;
++    }
++    .prod_img{
++        width: 200px;
++        height: 182px;
++        overflow: hidden;
++    }
++    .prod_img img{
++        margin-top: -10px;
++    }
++}

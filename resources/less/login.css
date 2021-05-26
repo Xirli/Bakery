@@ -1,0 +1,95 @@
+body {
+  background: #FFFFFF;
+}
+.section_title h1 {
+  font-family: 'Caveat', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 39px;
+  line-height: 81px;
+  text-align: center;
+  align-items: center;
+  color: #000000;
+  margin-top: 90px;
+}
+.title_line {
+  margin-top: 15px;
+  border: 1px solid #000000;
+  max-width: 650px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+.form-check {
+  text-align: right;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 20px;
+  font-family: "Roboto Mono", serif;
+}
+.section_title {
+  margin: auto;
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+}
+.content {
+  align-self: center;
+  width: 650px;
+  margin: auto;
+  font-family: "Roboto Mono", serif;
+  font-style: normal;
+  font-weight: normal;
+}
+.left_text {
+  height: 100%;
+  text-align: center;
+  margin: 20px;
+  line-height: normal;
+  vertical-align: middle;
+}
+.right_text {
+  text-align: right;
+}
+.content_form {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #000000;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+.no_account {
+  margin-top: 30px;
+  margin-bottom: 90px;
+}
+.no_account a {
+  color: black;
+}
+.my-button {
+  width: 200px;
+  height: 39px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 50px;
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  color: #000000;
+}
+@media (max-width: 540px) {
+  .section_title h1 {
+    margin-top: 50px;
+  }
+}
+/*# sourceMappingURL=login.css.map */

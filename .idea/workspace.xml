@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="finished except shopping cart and reviews">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/container.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/container.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/landing.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/landing.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/news_item.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/news_item.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news_item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news_item.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
-    </list>
+    <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="finished except shopping cart and reviews +some" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,7 +246,7 @@
       <workItem from="1621934927777" duration="4439000" />
       <workItem from="1621942373814" duration="13068000" />
       <workItem from="1621960061072" duration="21215000" />
-      <workItem from="1622016170733" duration="8409000" />
+      <workItem from="1622016170733" duration="9075000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1619799435160</created>
@@ -348,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622021996051</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="finished except shopping cart and reviews +some">
+      <created>1622028646483</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1622028646483</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,6 +376,7 @@
     <MESSAGE value="finished contacts" />
     <MESSAGE value="finished some" />
     <MESSAGE value="finished except shopping cart and reviews" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished except shopping cart and reviews" />
+    <MESSAGE value="finished except shopping cart and reviews +some" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished except shopping cart and reviews +some" />
   </component>
 </project>
