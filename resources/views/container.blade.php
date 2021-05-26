@@ -9,13 +9,14 @@
             </div>
         </div>
         <div class="wrap_divs">
-            <div class="item1" style="background: url('public/images/cat_all.png') center center no-repeat;"><p class="cat_text">Все меню</p></div>
-            <div class="item1" style="background: url('public/images/cat_1.png') center center no-repeat;"><p class="cat_text">Хліб класичний</p></div>
-            <div class="item1" style="background: url('public/images/cat_2.png') center center no-repeat;"><p class="cat_text">Здобна випічка</p></div>
-            <div class="item1" style="background: url('public/images/cat_3.png') center center no-repeat;"><p class="cat_text">Веганська випічка</p></div>
-            <div class="item1" style="background: url('public/images/cat_4.png') center center no-repeat;"><p class="cat_text">Пироги</p></div>
-            <div class="item1" style="background: url('public/images/cat_5.png') center center no-repeat;"><p class="cat_text">Хліб класичний</p></div>
-            <div class="item1" style="background: url('public/images/cat_6.png') center center no-repeat;"><p class="cat_text">Хліб класичний</p></div>
+            <a href="products/all">
+                <div class="item1" style="background: url('public/images/cat_all.png') center center no-repeat;"><p class="cat_text">Все меню</p></div>
+            </a>
+            @foreach($all_cat as $category)
+                <a href="products/{{$category->id}}">
+                    <div class="item1" style="background: url('{{$category->category_photo}}') center center no-repeat;"><p class="cat_text">{{$category->category_name}}</p></div>
+                </a>
+            @endforeach
         </div>
     </div>
 @endsection

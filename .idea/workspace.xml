@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="finished about_us">
-      <change afterPath="$PROJECT_DIR$/public/images/cat_all.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/prod_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/prod_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/prod_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/prod_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/prod_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/prod_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/produt_image_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/less/container.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/less/news.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/less/product.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/less/products.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/container.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/product.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
+    <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="finished some">
+      <change afterPath="$PROJECT_DIR$/public/images/news_2_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/news_3_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/news_item1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/news_item2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/less/news_item.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news_item.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/about.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/about.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/less/contacts.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/contacts.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/container.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/container.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/landing.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/landing.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/login.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/news.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/news.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/product.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/product.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/products.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/products.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/profile_page.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/profile_page.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/register.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/register.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/container.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/container.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/landing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landing.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shopping_cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shopping_cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
@@ -65,6 +81,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -186,6 +210,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -251,7 +276,20 @@
       <workItem from="1621328842286" duration="598000" />
       <workItem from="1621348305122" duration="1799000" />
       <workItem from="1621413428836" duration="18634000" />
-      <workItem from="1621502844459" duration="5803000" />
+      <workItem from="1621502844459" duration="11115000" />
+      <workItem from="1621528559897" duration="10309000" />
+      <workItem from="1621593861867" duration="13613000" />
+      <workItem from="1621616853045" duration="3495000" />
+      <workItem from="1621626425450" duration="4093000" />
+      <workItem from="1621671143779" duration="11724000" />
+      <workItem from="1621727343952" duration="4253000" />
+      <workItem from="1621769515825" duration="27945000" />
+      <workItem from="1621857532460" duration="1227000" />
+      <workItem from="1621889058654" duration="5811000" />
+      <workItem from="1621934927777" duration="4439000" />
+      <workItem from="1621942373814" duration="13068000" />
+      <workItem from="1621960061072" duration="21215000" />
+      <workItem from="1622016170733" duration="3303000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1619799435160</created>
@@ -330,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621423756948</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="finished some">
+      <created>1621508933989</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1621508933990</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +403,7 @@
     <MESSAGE value="finished adaptive footer" />
     <MESSAGE value="finished landing" />
     <MESSAGE value="finished contacts" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished contacts" />
+    <MESSAGE value="finished some" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished some" />
   </component>
 </project>

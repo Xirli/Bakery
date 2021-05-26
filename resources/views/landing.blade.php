@@ -51,29 +51,22 @@
         <h1 class="cat_header">У нас ви можете знайти</h1>
         <div class="container">
             <div id="categories" class="owl-carousel">
-                <a href="/#">
-                    <div class="category_1">
-                        <p class="cat_text">Хліб класичний</p>
-                    </div>
-                </a>
-
-                <div class="category_2">
-                    <p class="cat_text">Здобна випічка</p>
-                </div>
-                <div class="category_3">
-                    <p class="cat_text">Веганська випічка</p>
-                </div>
+                @for($i=0;$i<3;$i++)
+                    <a href="products/{{$some_cat->get($i)->id}}">
+                        <div class="category_1" style="background: url({{$some_cat->get($i)->category_photo}}) center center no-repeat;">
+                            <p class="cat_text">{{$some_cat->get($i)->category_name}}</p>
+                        </div>
+                    </a>
+                @endfor
             </div>
             <div id="categories1" class="owl-carousel">
-                <div class="category_4">
-                    <p class="cat_text">Пироги</p>
-                </div>
-                <div class="category_5">
-                    <p class="cat_text">Хліб класичний</p>
-                </div>
-                <div class="category_6">
-                    <p class="cat_text">Хліб класичний</p>
-                </div>
+                @for($i=3;$i<6;$i++)
+                    <a href="products/{{$some_cat->get($i)->id}}">
+                        <div class="category_1" style="background: url({{$some_cat->get($i)->category_photo}}) center center no-repeat;">
+                            <p class="cat_text">{{$some_cat->get($i)->category_name}}</p>
+                        </div>
+                    </a>
+                @endfor
             </div>
         </div>
     </div>
@@ -82,33 +75,17 @@
         <h1 class="about_head">Новини</h1>
         <hr class="about_line">
         <div id="categories_news" class="owl-carousel">
-            <div class="news_c">
-                <h1 class="news_h">Різдвяна пропозиція</h1>
-                <img class="news_photo" src="public/images/news_ph.png">
-                <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
-                <div class="more_wrap">
-                    <a class="more">Детальніше</a>
-                    <img src="public/images/arrow.svg">
+            @foreach($all_news as $n)
+                <div class="news_c">
+                    <h1 class="news_h">{{$n->title}}</h1>
+                    <img class="news_photo" src="{{$n->main_photo}}">
+                    <div class="news_t">{{$n->p1}}</div>
+                    <div class="more_wrap">
+                        <a href="/Bakery/news{{$n->id}}" class="more">Детальніше</a>
+                        <img src="public/images/arrow.svg">
+                    </div>
                 </div>
-            </div>
-            <div class="news_c">
-                <h1 class="news_h">Різдвяна пропозиція</h1>
-                <img class="news_photo" src="public/images/news_ph.png">
-                <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
-                <div class="more_wrap">
-                    <a class="more">Детальніше</a>
-                    <img src="public/images/arrow.svg">
-                </div>
-            </div>
-            <div class="news_c">
-                <h1 class="news_h">Різдвяна пропозиція</h1>
-                <img class="news_photo" src="public/images/news_ph.png">
-                <div class="news_t">Попереду – Різдво, тож готуємо святкове печиво на будь-який смак. В ідеалі готувати всією сім'єю, а потім дружно поїдати за різдвяним столом.</div>
-                <div class="more_wrap">
-                    <a class="more">Детальніше</a>
-                    <img src="public/images/arrow.svg">
-                </div>
-            </div>
+            @endforeach
         </div>
         <button class="more_news">Всі новини</button>
     </div>

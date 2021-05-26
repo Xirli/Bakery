@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Category;
+use App\Models\News;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,55 +15,54 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
+    $all_cat = Category::all();
+    $all_news = News::all();
+    $some_cat = $all_cat ->take(6);
     $page_name = 'Bakery';
-    return view('landing', compact('page_name'));
+    return view('landing', compact('page_name', 'all_cat', 'all_news', 'some_cat'));
 });
 Route::get('/contacts', function () {
-    $page_name = 'Контакти';
-    return view('contacts', compact('page_name'));
+    $all_cat = Category::all();
+    return view('contacts', ['page_name' => 'Контакти'], compact('all_cat'));
 });
 Route::get('/about', function () {
-    $page_name = 'Про нас';
-    return view('about', compact('page_name'));
+    $all_cat = Category::all();
+    return view('about', ['page_name' => 'Про нас'], compact('all_cat'));
 });
 Route::get('/menu', function () {
-    $page_name = 'Меню';
-    return view('container', compact('page_name'));
+    $all_cat = Category::all();
+    return view('menu', ['page_name' => 'Меню'], compact('all_cat'));
 });
-Route::get('/news', function () {
-    $page_name = 'Новини';
-    return view('news', compact('page_name'));
+Route::get('/news',[App\Http\Controllers\NewsController::class, 'load_all']);
+Route::get('/news{id}',[App\Http\Controllers\NewsController::class, 'load']);
+Route::get('/products/all', [App\Http\Controllers\ProductController::class, 'load_all']);
+Route::get('/products/{id}/product', [App\Http\Controllers\ProductController::class, 'detail'])->name('product');
+Route::get('/products/{category_id}', [App\Http\Controllers\ProductController::class, 'load']);
+Route::get('/menu', [App\Http\Controllers\CategoryController::class, 'load']);
+
+
+Route::get('/login1', function () {
+    $all_cat = Category::all();
+    $page_name = 'Вхід';
+    return view('login', compact('page_name', 'all_cat'));
 });
-Route::get('/products', function () {
-    $page_name = 'Хліб білий';
-    return view('products', compact('page_name'));
-});
-Route::get('/product', function () {
-    $page_name = 'Хліб класичний';
-    return view('product', compact('page_name'));
-});
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/register', function () {
-    return view('register');
-});
+
 
 Route::get('/shopping', function () {
     return view('shopping_cart');
 });
 Route::get('/shopping_cart', function () {
-    return view('shopping_cart');
+    $page_name = 'Кошик';
+    return view('shopping_cart', compact('page_name'));
 });
 
-Route::get('/profile', function () {
-    return view('profile_page');
-});
-Route::get('/profile_page', function () {
-    return view('profile_page');
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/home', [App\Http\Controllers\HomeController::class, 'updateUser'])->name('updateUser');
+
+//Route::get('/profile_page', function () {
+//    return view('profile_page');
+//});
 
 Route::get('/confirm', function () {
     return view('confirm_order');
@@ -68,3 +70,5 @@ Route::get('/confirm', function () {
 Route::get('/confirm_order', function () {
     return view('confirm_order');
 });
+
+Auth::routes();

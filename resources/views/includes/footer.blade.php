@@ -5,24 +5,24 @@
                 <a class="footer_titles">КОНТАКТИ</a>
                 <div class="footer_span_wrap" align="center">
                     <div class="s">
-                        <img src="public/images/phone3.svg">
+                        <img src="{{asset('public/images/phone3.svg')}}">
                         <span class="footer_span">+1-2222-44445-44</span>
                     </div>
                     <div class="s">
-                        <img src="public/images/phone3.svg">
+                        <img src="{{asset('public/images/phone3.svg')}}">
                         <span class="footer_span">+1-2222-44445-44</span>
                     </div>
                     <div class="s">
-                        <img src="public/images/email1.svg">
+                        <img src="{{asset('public/images/email1.svg')}}">
                         <span class="footer_span">bakery@gmail.com</span>
                     </div>
                 </div>
                 <a class="footer_titles">СОЦМЕРЕЖІ</a>
                 <div class="social_wrap">
-                    <img src="public/images/instagram1.svg">
-                    <img src="public/images/tiktok1.svg">
-                    <img src="public/images/pinterest1.svg">
-                    <img src="public/images/facebook1.svg">
+                    <img src="{{asset('public/images/instagram1.svg')}}">
+                    <img src="{{asset('public/images/tiktok1.svg')}}">
+                    <img src="{{asset('public/images/pinterest1.svg')}}">
+                    <img src="{{asset('public/images/facebook1.svg')}}">
                 </div>
 
             </div>

@@ -16,13 +16,25 @@ body{
 .title_line{
     margin-top: 15px;
     border: 1px solid #000000;
-    width: 650px;
-    margin-right: calc(50% - 325px);
-    margin-left: calc(50% - 325px);
+    max-width: 650px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 30px;
+}
+.form-check{
+    text-align: right;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", serif;
 }
 
 .section_title{
+    margin: auto;
+    max-width: 650px;
+    width: 100%;
     text-align: center;
 }
 .content{
@@ -59,12 +71,6 @@ body{
     margin-top: 10px;
 }
 
-.forgot_password{
-    text-align: right;
-    a{
-        color: black;
-    }
-}
 
 .no_account{
     margin-top: 30px;
@@ -96,5 +102,9 @@ body{
     color: #000000;
 }
 
-
+@media (max-width: 540px) {
+    .section_title h1{
+        margin-top: 50px;
+    }
+}
 
