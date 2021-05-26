@@ -1,48 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="finished some">
-      <change afterPath="$PROJECT_DIR$/public/images/news_2_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/news_3_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/news_item1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/news_item2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/less/news_item.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/news_item.blade.php" afterDir="false" />
+    <list default="true" id="07f3425a-71ad-461f-a23e-3ee0d1b8ac20" name="Default Changelist" comment="finished except shopping cart and reviews">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/contacts.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/contacts.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/less/container.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/container.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/header.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/less/landing.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/landing.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/login.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/news.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/news.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/product.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/product.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/products.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/products.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/profile_page.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/profile_page.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/less/register.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/register.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/container.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/container.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/landing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile_page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shopping_cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shopping_cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/less/news_item.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/less/news_item.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news_item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news_item.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,7 +255,7 @@
       <workItem from="1621934927777" duration="4439000" />
       <workItem from="1621942373814" duration="13068000" />
       <workItem from="1621960061072" duration="21215000" />
-      <workItem from="1622016170733" duration="3303000" />
+      <workItem from="1622016170733" duration="8409000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1619799435160</created>
@@ -375,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621508933990</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="finished except shopping cart and reviews">
+      <created>1622021996050</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1622021996051</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,6 +377,7 @@
     <MESSAGE value="finished landing" />
     <MESSAGE value="finished contacts" />
     <MESSAGE value="finished some" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished some" />
+    <MESSAGE value="finished except shopping cart and reviews" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished except shopping cart and reviews" />
   </component>
 </project>

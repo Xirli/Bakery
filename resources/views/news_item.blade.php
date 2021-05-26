@@ -7,6 +7,7 @@
     <script type="text/javascript" src="{{ asset('public/js/slider.js') }}"></script>
     <link rel="stylesheet" href=" {{ asset('public/css/product.css') }}">
     <link rel="stylesheet" href=" {{ asset('public/css/landing.css') }}">
+    <link rel="stylesheet" href=" {{ asset('public/css/news_item.css') }}">
     <div class="container">
         <div class="page_name">
             <h1 class="name_head">{{$news->title}}</h1>

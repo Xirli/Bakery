@@ -34573,6 +34573,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/less/news_item.less":
+/*!***************************************!*\
+  !*** ./resources/less/news_item.less ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/less/profile_page.less":
 /*!******************************************!*\
   !*** ./resources/less/profile_page.less ***!
@@ -49832,6 +49845,7 @@ Vue.compile = compileToFunctions;
 /******/ 			"css/footer": 0,
 /******/ 			"css/header": 0,
 /******/ 			"css/profile_page": 0,
+/******/ 			"css/news_item": 0,
 /******/ 			"css/news": 0,
 /******/ 			"css/login": 0,
 /******/ 			"css/register": 0,
@@ -49885,19 +49899,20 @@ Vue.compile = compileToFunctions;
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/header.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/footer.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/container.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/landing.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/product.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/products.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/contacts.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/register.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/login.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/news.less")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/profile_page.less")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/header.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/footer.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/container.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/landing.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/product.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/products.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/contacts.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/register.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/login.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/news.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/news_item.less")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/less/profile_page.less")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/landing","css/container","css/footer","css/header","css/profile_page","css/news_item","css/news","css/login","css/register","css/contacts","css/products","css/product"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
