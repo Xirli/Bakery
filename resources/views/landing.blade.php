@@ -76,18 +76,22 @@
         <hr class="about_line">
         <div id="categories_news" class="owl-carousel">
             @foreach($all_news as $n)
-                <div class="news_c">
-                    <h1 class="news_h">{{$n->title}}</h1>
-                    <img class="news_photo" src="{{$n->main_photo}}">
-                    <div class="news_t">{{$n->p1}}</div>
-                    <div class="more_wrap">
-                        <a href="/Bakery/news{{$n->id}}" class="more">Детальніше</a>
-                        <img src="public/images/arrow.svg">
+                <div class="wrappp">
+                    <div class="news_c">
+                        <h1 class="news_h">{{$n->title}}</h1>
+                        <img class="news_photo" src="{{$n->main_photo}}">
+                        <div class="news_t">{{$n->p1}}</div>
+                        <div class="more_wrap">
+                            <a href="/Bakery/news{{$n->id}}" class="more">Детальніше</a>
+                            <img src="public/images/arrow.svg">
+                        </div>
                     </div>
                 </div>
             @endforeach
         </div>
-        <button class="more_news">Всі новини</button>
+        <a class="no_underline" href="/Bakery/news">
+            <button class="more_news">Всі новини</button>
+        </a>
     </div>
 </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

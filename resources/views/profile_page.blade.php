@@ -114,76 +114,62 @@
                         @csrf
                     </form>
                 </div>
-
-
-
             </div>
         </div>
         <div class="my-orders">
             <div class="my-orders-block">
-                <div>
                     <div class="personal-data-title">
                         <img src="public/images/shopping_cart.svg" alt="">
                         Мої замовлення
                     </div>
                     <div class="personal-data-line"></div>
-                </div>
+            </div>
+        </div>
+        <div id="myList">
+            @foreach($orders as $order)
                 <div class="my-order-inner-block">
                     <div class="my-orders-order-number">
-                        ЗАМОВЛЕННЯ № 3
+                        ЗАМОВЛЕННЯ № {{$order->id}}
                         <div class="my-orders-order-number-line"></div>
                     </div>
                     <div class="my-orders-products">
-                        <table>
+                        <table class="top_table">
+                            @foreach($order->cart_items as $item)
+                                <tr>
+                                    <td>{{\App\Models\Product::find($item->product_id)->name}}</td>
+                                    <td>{{\App\Models\Product::find($item->product_id)->value}} ₴</td>
+                                    <td>{{$item->quantity}} шт.</td>
+                                </tr>
+                            @endforeach
                             <tr>
-                                <td>Хліб гарбузовий</td>
-                                <td>36 ₴</td>
-                                <td>2 шт.</td>
-                            </tr>
-                            <tr>
-                                <td>Хліб цільнозерновий</td>
-                                <td>22 ₴</td>
-                                <td>5 шт.</td>
-                            </tr>
-                            <tr>
-                                <td>Чіабатта</td>
-                                <td>20 ₴</td>
-                                <td>1 шт.</td>
-                            </tr>
-                            <tr>
-                                <td>Цеглинка біла</td>
-                                <td>14 ₴</td>
-                                <td>3 шт.</td>
+                                <td>СУМА</td>
+                                <td>{{$order->price}} ₴</td>
+                                <td></td>
                             </tr>
                         </table>
                     </div>
-                    <div>
-                        <div class="my-orders-products-sum-line"></div>
-                        <div class="my-orders-products-sum">
-                            <p>СУМА</p>
-                            <p>189 ₴</p>
-                        </div>
-                    </div>
-                    <div class="my-orders-user-info">
-                        <div class="my-orders-user-info-block">
-                            Ульяна
-                            <span class="my-orders-user-info-block-left">ullasa@ukr.net</span>
-                        </div>
-                        <div class="my-orders-user-info-block">
-                            Пироговська
-                            <span class="my-orders-user-info-block-left">380965466098</span>
-                        </div>
-                        <div class="my-orders-user-info-block">
-                            Володимирівна
-                            <span class="my-orders-user-info-block-left">Київ, Відділення Нової Почти №5</span>
-                        </div>
+                    <div class="my-orders-order-number-line"></div>
+                    <div class="my-orders-products">
+                        <table class="bottom_table">
+                            <tr>
+                                <td>{{$order->first_name}}</td>
+                                <td></td>
+                                <td>{{$order->email}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{$order->last_name}}</td>
+                                <td></td>
+                                <td>{{$order->phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{$order->father_name}}</td>
+                                <td></td>
+                                <td>{{$order->address}}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-            </div>
-            <div class="my-orders-load-more-button-div">
-                <button class="my-orders-load-more-button">ПОКАЗАТИ ЩЕ</button>
-            </div>
+            @endforeach
         </div>
     </div>
-
 @endsection

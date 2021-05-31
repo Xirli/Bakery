@@ -1,18 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 body {
   background: #FFFFFF;
 }
 .order-block {
-  height: 200px;
-  width: 650px;
+  max-width: 650px;
+  width: 100%;
   box-sizing: border-box;
   background: #FFFFFF;
   border: white;
   margin-right: auto;
   margin-left: auto;
+  font-size: 18px !important;
+}
+.left_text {
+  text-align: left !important;
+}
+.personal-data-block {
+  height: auto !important;
 }
 .section-title {
   font-family: Caveat;
@@ -46,7 +49,8 @@ body {
 }
 .section-line {
   margin-top: 28px;
-  width: 650px;
+  max-width: 650px;
+  width: 100%;
   background: #000000;
   border: 1px solid #000000;
 }
@@ -65,7 +69,8 @@ body {
   line-height: 24px;
 }
 .order-user-info-block-line-input {
-  width: 256px;
+  max-width: 256px;
+  width: 100%;
   background: #FFFFFF;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -95,12 +100,10 @@ body {
   margin-right: 25px;
 }
 .order-payment-decision {
-  display: flex;
   margin-top: 25px;
   font-family: 'Roboto Mono', cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
   line-height: 18px;
 }
 .order-products {
@@ -116,7 +119,7 @@ th {
   font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 18px !important;
   line-height: 24px;
   color: #5E5E5E;
   height: 4rem;
@@ -128,7 +131,6 @@ td {
   font-family: 'Roboto Mono', cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
   line-height: 24px;
   color: black;
   height: 3rem;
@@ -152,14 +154,18 @@ td:nth-child(1) {
   line-height: 24px;
   color: black;
 }
+.tab {
+  width: 100%;
+}
 .order-confirm-button-div {
   text-align: center;
   align-items: center;
-  margin-top: 1030px;
 }
 .order-confirm-button {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 39px;
+  margin-top: 60px;
   margin-bottom: 190px;
   background: #FFFFFF;
   border: 1px solid #000000;
@@ -172,5 +178,20 @@ td:nth-child(1) {
   line-height: 24px;
   align-items: center;
   text-transform: uppercase;
+}
+@media (max-width: 540px) {
+  .order-block {
+    font-size: 14px !important;
+  }
+  td {
+    font-size: 14px !important;
+  }
+  .order-products {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .tab_price {
+    width: 48px;
+  }
 }
 /*# sourceMappingURL=confirm_order.css.map */

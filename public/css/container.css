@@ -54,6 +54,12 @@
   align-items: center;
   margin-top: 15px;
 }
+.vlads_advice {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
 .cat_text {
   position: relative;
   font-family: Caveat;

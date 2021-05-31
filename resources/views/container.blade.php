@@ -13,7 +13,7 @@
                 <div class="item1" style="background: url('public/images/cat_all.png') center center no-repeat;"><p class="cat_text">Все меню</p></div>
             </a>
             @foreach($all_cat as $category)
-                <a href="products/{{$category->id}}">
+                <a class="vlads_advice" href="products/{{$category->id}}">
                     <div class="item1" style="background: url('{{$category->category_photo}}') center center no-repeat;"><p class="cat_text">{{$category->category_name}}</p></div>
                 </a>
             @endforeach

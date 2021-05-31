@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Auth\RegisterController;
+use App\Models\Order;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
@@ -30,10 +31,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $all_cat = \App\Models\Category::all();
-        $user_details = \App\Models\User::find(Auth::id());
+        $all_cat = Category::all();
+        $user_details = User::find(Auth::id());
         $page_name = 'Профіль';
-        return view('profile_page', compact('page_name', 'all_cat', 'user_details'));
+        $orders = Order::with('Cart_items')->where('user_id','=',Auth::id())->get();
+        return view('profile_page', compact('page_name', 'all_cat', 'user_details', 'orders'));
     }
     public function updateUser(Request $request)
     {

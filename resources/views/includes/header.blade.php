@@ -90,7 +90,9 @@
                     <a href="{{ route('login') }}">
                         <img src="{{asset('public/images/user.svg')}}">
                     </a>
-                    <img src="{{asset('public/images/shopping_cart.svg')}}">
+                    <a href="{{ route('cart') }}">
+                        <img src="{{asset('public/images/shopping_cart.svg')}}">
+                    </a>
                 </div>
             </div>
         </div>

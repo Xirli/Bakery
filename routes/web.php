@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 use App\Models\Category;
 use App\Models\News;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +17,7 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     $all_cat = Category::all();
     $all_news = News::all();
@@ -41,34 +44,17 @@ Route::get('/products/{id}/product', [App\Http\Controllers\ProductController::cl
 Route::get('/products/{category_id}', [App\Http\Controllers\ProductController::class, 'load']);
 Route::get('/menu', [App\Http\Controllers\CategoryController::class, 'load']);
 
-
-Route::get('/login1', function () {
-    $all_cat = Category::all();
-    $page_name = 'Вхід';
-    return view('login', compact('page_name', 'all_cat'));
-});
-
-
-Route::get('/shopping', function () {
-    return view('shopping_cart');
-});
-Route::get('/shopping_cart', function () {
-    $page_name = 'Кошик';
-    return view('shopping_cart', compact('page_name'));
-});
+Route::get('/shopping_cart', [App\Http\Controllers\CartController::class, 'load'])->name('cart');
+Route::post('/shopping_cart/{product}', [App\Http\Controllers\CartController::class, 'store'])->name('cart.store');
+Route::delete('/cart/{product}', [App\Http\Controllers\CartController::class, 'destroy'])->name('cart.destroy');
+Route::patch('/cart/{product}', [App\Http\Controllers\CartController::class, 'update'])->name('cart.update');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/home', [App\Http\Controllers\HomeController::class, 'updateUser'])->name('updateUser');
 
-//Route::get('/profile_page', function () {
-//    return view('profile_page');
-//});
+Route::get('/confirm_order', [App\Http\Controllers\OrderController::class, 'load'])->name('order');
+Route::post('/confirm_order', [App\Http\Controllers\OrderController::class, 'confirm'])->name('order.confirm');
 
-Route::get('/confirm', function () {
-    return view('confirm_order');
-});
-Route::get('/confirm_order', function () {
-    return view('confirm_order');
-});
-
+Route::get('/thanks', [App\Http\Controllers\OrderController::class, 'thanks'])->name('thanks');
+Route::post('/products/{id}/product', [ProductController::class, 'addReview'])->name('addReview');
 Auth::routes();

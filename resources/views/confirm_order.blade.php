@@ -1,131 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-
-    <link href="{{ asset ('public/css/app.css') }}" rel="stylesheet"/>
-    <link href="{{ asset ('public/css/header.css') }}" rel="stylesheet"/>
-    <link href="{{ asset ('public/css/footer.css') }}" rel="stylesheet"/>
-
+@extends('welcome')
+@section('content')
     <link href="{{ asset ('public/css/confirm_order.css') }}" rel="stylesheet"/>
+    <link href="{{ asset ('public/css/profile_page.css') }}" rel="stylesheet"/>
+    <div class="container">
+        <form method="post" action="{{route('order.confirm')}}">
+            @csrf
+            <div class="order-block" >
+                <div>
+                    <div class="section-title">
+                        <img src="public/images/shopping_cart.svg" alt="">
+                        Особисті дані
+                    </div>
+                    <div class="section-line"></div>
+                </div>
+                <div class="personal-data">
+                    @if(isset($user_details))
+                        <div class="personal-data-block">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="first_name" class="left_text">{{ __('ІМЯ') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="first_name" class="content_form @error('first_name') is-invalid @enderror"
+                                           placeholder="" type="text" name="first_name"  value="{{ $user_details->first_name }}" required autocomplete="off" autofocus>
+                                    @error('first_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="last_name" class="left_text">{{ __('ФАМІЛІЯ') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="last_name" class="content_form @error('last_name') is-invalid @enderror"
+                                           placeholder="" type="text" name="last_name" value="{{ $user_details->last_name }}" required autocomplete="off" autofocus>
+                                    @error('last_name')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="father_name" class="left_text">{{ __('ПО-БАТЬКОВІ') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="father_name" class="content_form @error('father_name') is-invalid @enderror" placeholder="" type="text" name="father_name" value="{{$user_details->father_name}}" required autocomplete="off" autofocus>
+                                    @error('father_name')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="email" class="left_text">{{ __('ЕЛ. ПОШТА') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="email" type="email" class="content_form @error('email') is-invalid @enderror"
+                                           placeholder=""  name="email" value="{{ $user_details->email }}" required autocomplete="off">
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet"/>
-    <title>Confirm order</title>
-</head>
-<body>
-@include('includes/header')
-<section class="order">
-    <div class="order-block">
-        <div>
-            <div class="section-title">
-                <img src="public/images/shopping_cart.svg" alt="">
-                Особисті дані
-            </div>
-            <div class="section-line"></div>
-        </div>
-        <div class="order-user-info-block">
-            <div class="order-user-info-block-line">
-                ІМ'Я
-                <div class="order-user-info-block-line-input">
-                    УЛЬЯНА
-                </div>
-            </div>
-            <div class="order-user-info-block-line">
-                ФАМІЛІЯ
-                <div class="order-user-info-block-line-input">
-                    ПИРОГОВСЬКА
-                </div>
-            </div>
-            <div class="order-user-info-block-line">
-                ПО-БАТЬКОВІ
-                <div class="order-user-info-block-line-input">
-                    ВОЛОДИМИРІВНА
-                </div>
-            </div>
-            <div class="order-user-info-block-line">
-                ЕЛ. ПОШТА
-                <div class="order-user-info-block-line-input">
-                    ULLASA@UKR.NET
-                </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="phone" class="left_text">{{ __('ТЕЛЕФОН') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="phone" class="content_form @error('phone') is-invalid @enderror"
+                                           placeholder="" type="text" name="phone" value="{{ $user_details->phone }}" required autocomplete="off" autofocus>
+                                    @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
 
-            </div>
-            <div class="order-user-info-block-line">
-                ТЕЛЕФОН
-                <div class="order-user-info-block-line-input">
-                    380965466098
+                            <div class="row">
+                                <div class="col">
+                                    <label for="address" class="left_text">{{ __('АДРЕСА ДОСТАВКИ') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="address" class="content_form @error('address') is-invalid @enderror"
+                                           placeholder="" type="text" name="address" value="{{ $user_details->address }}" required autocomplete="off" autofocus>
+                                    @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <div class="personal-data-block">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="first_name" class="left_text">{{ __('ІМЯ') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="first_name" class="content_form @error('first_name') is-invalid @enderror"
+                                           placeholder="" type="text" name="first_name"  value="" required autocomplete="off" autofocus>
+                                    @error('first_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="last_name" class="left_text">{{ __('ФАМІЛІЯ') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="last_name" class="content_form @error('last_name') is-invalid @enderror"
+                                           placeholder="" type="text" name="last_name" value="" required autocomplete="off" autofocus>
+                                    @error('last_name')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="father_name" class="left_text">{{ __('ПО-БАТЬКОВІ') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="father_name" class="content_form @error('father_name') is-invalid @enderror" placeholder="" type="text" name="father_name" value="" required autocomplete="off" autofocus>
+                                    @error('father_name')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="email" class="left_text">{{ __('ЕЛ. ПОШТА') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="email" type="email" class="content_form @error('email') is-invalid @enderror"
+                                           placeholder=""  name="email" value="" required autocomplete="off">
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="phone" class="left_text">{{ __('ТЕЛЕФОН') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="phone" class="content_form @error('phone') is-invalid @enderror"
+                                           placeholder="" type="text" name="phone" value="" required autocomplete="off" autofocus>
+                                    @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="address" class="left_text">{{ __('АДРЕСА ДОСТАВКИ') }}</label>
+                                </div>
+                                <div class="col">
+                                    <input id="address" class="content_form @error('address') is-invalid @enderror"
+                                           placeholder="" type="text" name="address" value="" required autocomplete="off" autofocus>
+                                    @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                </div>
+                <div class="section-line"></div>
+                <div class="order-payment">
+                    <div class="title">
+                        Спосіб оплати
+                    </div>
+                    <div class="order-payment-decision">
+                        <input type="radio" name="pay" id="exampleRadios" value="cash" checked>
+                        <label for="exampleRadios">
+                            Оплата при отриманні товару
+                        </label>
+                    </div>
+                    <div class="order-payment-decision">
+                        <input type="radio" name="pay" id="exampleRadios1" value="card">
+                        <label for="exampleRadios1">
+                            Оплата картою Visa/MasterCard (LiqPay)
+                        </label>
+                    </div>
+                </div>
+                <div class="section-line"></div>
+                <div class="order-products">
+                    <input type="hidden" value="{{$sum = 0}}">
+                    <table class="tab">
+                        @foreach (Cart::content() as $item)
+                            <tr>
+                                <td>{{$item->name}}</td>
+                                <td>{{$item->price * $item->qty}} ₴</td>
+                                <td class="tab_price">{{$item->qty}}шт.</td>
+                            </tr>
+                            <input type="hidden" value="{{$sum += $item->price * $item->qty}}">
+                        @endforeach
+                            <tr>
+                                <td>СУМА</td>
+                                <td >{{$sum}} ₴</td>
+                                <td></td>
+                            </tr>
+                    </table>
+                    <input name="sum" value="{{$sum}}" type="hidden">
+                </div>
+                <div class="section-line"></div>
+                <div class="order-confirm-button-div">
+                    <button type="submit" class="order-confirm-button">ПІДТВЕРДИТИ ЗАМОВЛЕННЯ</button>
                 </div>
             </div>
-            <div class="order-user-info-block-line">
-                АДРЕСА ДОСТАВКИ
-                <div class="order-user-info-block-line-input">
-                    КИЇВ, ВІДДІЛЕННЯ НОВОЇ ПОШТИ №5
-                </div>
-            </div>
-        </div>
-        <div class="section-line"></div>
-        <div class="order-payment">
-            <div class="title">
-                Спосіб оплати
-            </div>
-            <div class="order-payment-decision">
-                <div class="order-payment-circle"></div>
-                <p>Оплата при отриманні товару</p>
-            </div>
-            <div class="order-payment-decision">
-                <div class="order-payment-circle"></div>
-                <p>Оплата картою Visa/MasterCard (LiqPay)</p>
-            </div>
-        </div>
-        <div class="section-line"></div>
-        <div class="order-products">
-            <table>
-                <tr>
-                    <th>Позиція</th>
-                    <th>Ціна</th>
-                    <th>Кількість</th>
-                </tr>
-                <tr>
-                    <td>Хліб гарбузовий</td>
-                    <td>36 ₴</td>
-                    <td>2 шт.</td>
-                </tr>
-                <tr>
-                    <td>Хліб цільнозерновий</td>
-                    <td>22 ₴</td>
-                    <td>5 шт.</td>
-                </tr>
-                <tr>
-                    <td>Чіабатта</td>
-                    <td>20 ₴</td>
-                    <td>1 шт.</td>
-                </tr>
-                <tr>
-                    <td>Цеглинка біла</td>
-                    <td>14 ₴</td>
-                    <td>3 шт.</td>
-                </tr>
-            </table>
-        </div>
-        <div class="section-line"></div>
-        <div class="order-sum">
-            <p>СУМА</p>
-            <p >189 ₴</p>
-        </div>
+        </form>
     </div>
-    <div class="order-confirm-button-div">
-        <button class="order-confirm-button">ПІДТВЕРДИТИ ЗАМОВЛЕННЯ</button>
-    </div>
-</section>
-@include('includes/footer')
-</body>
-</html>
+@endsection

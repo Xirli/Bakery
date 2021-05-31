@@ -24,6 +24,8 @@ mix.js('resources/js/app.js', 'public/js')
     .less('resources/less/register.less', 'public/css')
     .less('resources/less/login.less', 'public/css')
     .less('resources/less/news.less', 'public/css')
+    .less('resources/less/confirm_order.less', 'public/css')
     .less('resources/less/news_item.less', 'public/css')
+    .less('resources/less/shopping_cart.less', 'public/css')
     .less('resources/less/profile_page.less', 'public/css')
     .sass('resources/sass/app.scss', 'public/css');

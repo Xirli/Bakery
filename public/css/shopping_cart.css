@@ -8,7 +8,7 @@ body {
   margin-right: auto;
   margin-top: 90px;
   max-width: 650px;
-    width: 100%;
+  width: 100%;
 }
 .title h1 {
   font-family: 'Caveat', cursive;
@@ -24,7 +24,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 650px;
-    width: 100%;
+  width: 100%;
 }
 .col {
   padding: 10px;
@@ -52,7 +52,6 @@ body {
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 10px;
   color: #000000;
 }
 .column_text2 {
@@ -66,25 +65,70 @@ body {
   margin: 10px;
   color: #000000;
 }
+#count {
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000000;
+}
+.prod_text {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000000;
+}
 .plus_minus {
   margin: 10px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+.add_count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.add_count_wrap {
+  align-items: center;
+}
+.refr {
+  margin-left: 5px;
+}
+.plus,
+.minus {
+  width: 25px;
+  height: 25px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
 }
 .cross {
-  margin-top: 15px;
-  margin-bottom: 10px;
   margin-left: 10px;
+  border: none;
   height: 15px;
   width: 15px;
 }
 .title_line {
-    border: 1px solid #000000;
+  margin-top: 0;
+  border: 1px solid #000000;
   max-width: 650px;
-    width: 100%;
-    margin: 0 auto 00px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 00px;
 }
 .checkout-button {
-  width: 400px;
+  max-width: 400px;
   height: 39px;
+  width: 100%;
   background: #FFFFFF;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -103,5 +147,44 @@ body {
 #basket {
   margin-left: 20px;
   margin-right: 46px;
+}
+@media (max-width: 585px) {
+  .it {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  .names {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .quantity {
+    display: none;
+  }
+  .it .row {
+    margin: auto;
+  }
+  .not_n {
+    display: none;
+  }
+  #count {
+    font-size: 14px;
+  }
+  .prod_text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .column_text,
+  .column_title,
+  .column_text2,
+  .checkout-button {
+    font-size: 14px;
+  }
+  .checkout-button {
+    max-width: 200px;
+  }
 }
 

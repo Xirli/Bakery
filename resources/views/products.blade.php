@@ -1,6 +1,7 @@
 @extends('welcome')
 @section('content')
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href=" {{ asset('public/css/products.css') }}">
     <div class="container">
         <div class="page_name">
@@ -21,8 +22,26 @@
                     <div class="prod_price">{{$product->value}}₴</div>
                 </div>
                 <div class="prod_2">
-                    <div class="stars"></div>
-                    <button class="buy"></button>
+                    <div class="stars">
+                        @for ($i = 0; $i < 5; $i++)
+                            @if (floor($product->rating) - $i >= 1)
+                                {{--Full Start--}}
+                                <i class="fas fa-star text-warning"> </i>
+                            @elseif ($product->rating - $i > 0)
+                                {{--Half Start--}}
+                                <i class="fas fa-star-half-alt text-warning"> </i>
+                            @else
+                                {{--Empty Start--}}
+                                <i class="far fa-star text-warning"> </i>
+                            @endif
+                        @endfor
+                    </div>
+                    <form  action="{{ route('cart.store', $product) }}" method="post">
+                        {{ csrf_field() }}
+                        <input name="count" id="count" class="prod_text" value="1" type="hidden" readonly>
+                        <button class="buy"></button>
+                    </form>
+
                 </div>
             </div>
         @endforeach

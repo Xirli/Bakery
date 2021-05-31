@@ -73,7 +73,6 @@ li {
     border: 1px solid #000000;
 }
 .personal-data-block{
-    height: 550px;
     max-width: 650px;
     width: 100%;
     box-sizing: border-box;
@@ -136,14 +135,16 @@ li {
     color: #CF8D2E
 }
 
-
+.bottom_table{
+    margin-bottom: 20px;
+}
 .my-orders{
     margin-top: 140px;
 }
+.my-order-inner-block{
+    margin-bottom: 35px;
+}
 .my-orders-block{
-
-
-    height: 550px;
     max-width: 650px;
     width: 100%;
     box-sizing: border-box;
@@ -155,8 +156,6 @@ li {
 .my-order-inner-block{
     max-width: 571px;
     width: 100%;
-    height: 480px;
-
 
     background: #FFFFFF;
     border: 1px solid #000000;
@@ -216,7 +215,7 @@ td{
     font-family: 'Roboto Mono', monospace;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 18px;
 
     color: #000000;
@@ -292,4 +291,19 @@ td{
     margin-bottom: 130px;
 
     color: #000000;
+}
+@media (max-width: 540px) {
+    .my-orders-products{
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .top_table, bottom_table{
+        width: 100%;
+    }
+    td{
+        font-size: 14px !important;
+    }
+    .personal-data-title{
+        margin-left: 0;
+    }
 }

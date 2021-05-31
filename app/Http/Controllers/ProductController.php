@@ -29,5 +29,14 @@ class ProductController extends Controller
         $some_products = Product::where([['id', '!=', $id ], ['category_id', '=', $product->category_id]])->get();
         return view('product', compact('product', 'page_name', 'some_products', 'all_cat'));
     }
-
+    function addReview(Request $request, $id){
+        $product = Product::find($id);
+        $user = auth()->user();
+        $product->makeReview($user,$request->input('star'),$request->input('review'));
+        return redirect()->back();
+    }
+    function showReview($id){
+        $product = Product::find($id);
+        return $product->reviews();
+    }
 }
