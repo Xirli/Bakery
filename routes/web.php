@@ -54,7 +54,7 @@ Route::post('/home', [App\Http\Controllers\HomeController::class, 'updateUser'])
 
 Route::get('/confirm_order', [App\Http\Controllers\OrderController::class, 'load'])->name('order');
 Route::post('/confirm_order', [App\Http\Controllers\OrderController::class, 'confirm'])->name('order.confirm');
+Route::post('/send', [App\Http\Controllers\HomeController::class, 'send'])->name('send');
 
-Route::get('/thanks', [App\Http\Controllers\OrderController::class, 'thanks'])->name('thanks');
 Route::post('/products/{id}/product', [ProductController::class, 'addReview'])->name('addReview');
 Auth::routes();

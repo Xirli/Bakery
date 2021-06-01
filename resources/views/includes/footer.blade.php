@@ -28,9 +28,10 @@
             </div>
             <div class="B">
                     <a class="footer_titles" style="width: 258px">ПІДПИСУЙСЯ ТА СЛІДКУЙ ЗА НОВИНАМИ</a>
-                    <form class="wrap_send">
-                        <input class="first_div" placeholder="введіть ваш e-mail" type="text" name="search_str" autocomplete="off">
-                        <button class="footer_send">Підписатися</button>
+                    <form action="{{ route('send') }}" method="post" class="wrap_send">
+                        @csrf
+                        <input class="first_div" placeholder="введіть ваш e-mail" type="text" name="email" autocomplete="off">
+                        <button type="submit" class="footer_send">Підписатися</button>
                     </form>
             </div>
             <div class="C">

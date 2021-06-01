@@ -2,7 +2,7 @@
 @section('content')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<link rel="stylesheet" href=" {{ asset('public/css/landing.css') }}">
+    <link rel="stylesheet" href=" {{ asset('public/css/landing.css') }}">
     <div id="owl-demo" class="owl-carousel">
         <div><img src="public/images/fon.png"></div>
         <div><img src="public/images/fon.png"></div>
@@ -70,7 +70,7 @@
             </div>
         </div>
     </div>
-<div class="container">
+    <div class="container">
     <div class="news_wrap">
         <h1 class="about_head">Новини</h1>
         <hr class="about_line">
@@ -94,7 +94,7 @@
         </a>
     </div>
 </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="text/javascript" src="{{ asset('public/js/slider.js') }}"></script>
 @endsection

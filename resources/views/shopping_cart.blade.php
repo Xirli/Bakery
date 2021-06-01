@@ -26,7 +26,9 @@
             @foreach (Cart::content() as $item)
             <div class="row">
                 <div class="col names">
-                    <div class="column_text">{{ $item->name }}</div>
+                    <a href="/Bakery/products/{{$item->id}}/product">
+                        <div class="column_text">{{ $item->name }}</div>
+                    </a>
                 </div>
                 <div class="col names">
                     <div class="column_text">{{ $item->price * $item->qty}} ₴</div>

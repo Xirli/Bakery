@@ -7,7 +7,6 @@ use App\Models\Product;
 use Darryldecode\Cart\Validators\Validator;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Auth\RegisterController;
 use App\Models\Order;
+use App\Models\Subscribed;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
@@ -36,6 +37,20 @@ class HomeController extends Controller
         $page_name = 'Профіль';
         $orders = Order::with('Cart_items')->where('user_id','=',Auth::id())->get();
         return view('profile_page', compact('page_name', 'all_cat', 'user_details', 'orders'));
+    }
+    public function send(Request $request){
+        $validator = Validator::make($request::all(), [
+            'email' => ['required','string','email','max:255','unique:subscribeds']
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+        $subscribed = new Subscribed();
+        $subscribed->email = Request::input('email');
+        $subscribed->save();
+        return redirect()->back();
     }
     public function updateUser(Request $request)
     {

@@ -32,6 +32,9 @@ class ProductController extends Controller
     function addReview(Request $request, $id){
         $product = Product::find($id);
         $user = auth()->user();
+        if($request->input('star') == null){
+            return redirect()->back()->with('message', 'Введіть рейтинг від 1 зірки!');
+        }
         $product->makeReview($user,$request->input('star'),$request->input('review'));
         return redirect()->back();
     }

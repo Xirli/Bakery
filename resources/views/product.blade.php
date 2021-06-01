@@ -148,12 +148,19 @@
         </div>
         <script type="text/javascript">
             $(document).ready(function () {
+                var x1 = document.getElementById("loadMore");
                 size_li = $('.review').length;
                 x=2;
+                if(x >= size_li){
+                    x1.style.display = "none";
+                }
                 $('#myList .review:lt('+x+')').show(1000);
                 $('#loadMore').click(function () {
                     x= (x+2 <= size_li) ? x+2 : size_li;
                     $('#myList .review:lt('+x+')').show(1000);
+                    if(x >= size_li){
+                        x1.style.display = "none";
+                    }
                 });
             });
         </script>
@@ -179,6 +186,11 @@
                 <label class="star star-1" for="star-1"></label>
             </div>
         </div>
+                @if (session()->has('message'))
+                    <div class="alert alert-danger">
+                        {{ session()->get('message') }}
+                    </div>
+                @endif
                 <textarea id="review" type="text" name="review" placeholder="Введіть текст тут..." value="{{ old('review') }}" class="review_form"></textarea>
                 @error('review')
                 <span class="add-product-review-input-text-box" role="alert">

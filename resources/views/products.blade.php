@@ -46,19 +46,26 @@
             </div>
         @endforeach
     </div>
-    <div class="see_more_button_div">
+    <div id="myDIV" class="see_more_button_div">
         <button id="loadMore" class="see_more_button">
             Показати більше
         </button>
     </div>
     <script>
         $(document).ready(function () {
+            var x1 = document.getElementById("myDIV");
             size_li = $('.product').length;
-            x=3;
+            x=6;
+            if(x >= size_li){
+                x1.style.display = "none";
+            }
             $('#myList .product:lt('+x+')').show(1000);
             $('#loadMore').click(function () {
                 x= (x+5 <= size_li) ? x+5 : size_li;
                 $('#myList .product:lt('+x+')').show(1000);
+                if(x >= size_li){
+                    x1.style.display = "none";
+                }
             });
         });
     </script>

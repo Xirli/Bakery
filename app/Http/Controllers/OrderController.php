@@ -12,10 +12,11 @@ use Illuminate\Support\Facades\Validator;
 
 class OrderController extends Controller
 {
-    public function thanks(){
-        $all_cat = Category::all();
-        return view('thanks', ['page_name' => 'Дякуємо'], compact('all_cat'));
-    }
+//    public function thanks(){
+//        $all_cat = Category::all();
+//
+//        return view('thanks', ['page_name' => 'Дякуємо'], compact('all_cat'));
+//    }
     public function load(){
         if(Cart::count() == 0){
             return redirect()->route('cart');
@@ -66,6 +67,8 @@ class OrderController extends Controller
             $cart_item->save();
         }
         Cart::destroy();
-        return redirect()->route('thanks');
+        $all_cat = Category::all();
+        $ord = Order::with('Cart_items')->where('id', '=', $order->id)->first();
+        return view('thanks', ['page_name' => 'Дякуємо'], compact('all_cat', 'ord'));
     }
 }

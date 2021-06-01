@@ -120,6 +120,19 @@ button:focus {
 .footer_span_wrap {
   width: 156px;
 }
+.first_div::-moz-placeholder {
+  text-align: center;
+}
+.first_div:-ms-input-placeholder {
+  text-align: center;
+}
+.first_div::placeholder {
+  text-align: center;
+}
+.first_div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 @media (max-width: 768px) {
   .wrap_send {
     width: 200px;
